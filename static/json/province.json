@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "code": "QHI",
+    "name": "青海",
+    "children": null
+  },
+  {
+    "id": 2,
+    "code": "SCN",
+    "name": "四川",
+    "children": null
+  },
+  {
+    "id": 3,
+    "code": "SDG",
+    "name": "山东",
+    "children": null
+  },
+  {
+    "id": 4,
+    "code": "SHX",
+    "name": "山西",
+    "children": null
+  },
+  {
+    "id": 5,
+    "code": "SXI",
+    "name": "陕西",
+    "children": null
+  },
+  {
+    "id": 6,
+    "code": "TSN",
+    "name": "天津",
+    "children": null
+  },
+  {
+    "id": 7,
+    "code": "XJG",
+    "name": "新疆",
+    "children": null
+  },
+  {
+    "id": 8,
+    "code": "XZG",
+    "name": "西藏",
+    "children": null
+  },
+  {
+    "id": 9,
+    "code": "BJ",
+    "name": "北京",
+    "children": null
+  },
+  {
+    "id": 10,
+    "code": "FJN",
+    "name": "福建",
+    "children": null
+  },
+  {
+    "id": 11,
+    "code": "AHI",
+    "name": "安徽",
+    "children": null
+  },
+  {
+    "id": 12,
+    "code": "CKG",
+    "name": "重庆",
+    "children": null
+  },
+  {
+    "id": 13,
+    "code": "GDN",
+    "name": "广东",
+    "children": null
+  },
+  {
+    "id": 14,
+    "code": "GSU",
+    "name": "甘肃",
+    "children": null
+  },
+  {
+    "id": 15,
+    "code": "GXI",
+    "name": "广西",
+    "children": null
+  },
+  {
+    "id": 16,
+    "code": "GZU",
+    "name": "贵州",
+    "children": null
+  },
+  {
+    "id": 17,
+    "code": "HAN",
+    "name": "海南",
+    "children": null
+  },
+  {
+    "id": 18,
+    "code": "HBI",
+    "name": "湖北",
+    "children": null
+  },
+  {
+    "id": 19,
+    "code": "HEB",
+    "name": "河北",
+    "children": null
+  },
+  {
+    "id": 20,
+    "code": "HEN",
+    "name": "河南",
+    "children": null
+  },
+  {
+    "id": 21,
+    "code": "HLJ",
+    "name": "黑龙江",
+    "children": null
+  },
+  {
+    "id": 22,
+    "code": "HNN",
+    "name": "湖南",
+    "children": null
+  },
+  {
+    "id": 23,
+    "code": "JLN",
+    "name": "吉林",
+    "children": null
+  },
+  {
+    "id": 24,
+    "code": "JSU",
+    "name": "江苏",
+    "children": null
+  },
+  {
+    "id": 25,
+    "code": "JXI",
+    "name": "江西",
+    "children": null
+  },
+  {
+    "id": 26,
+    "code": "LNG",
+    "name": "辽宁",
+    "children": null
+  },
+  {
+    "id": 27,
+    "code": "NMG",
+    "name": "内蒙古",
+    "children": null
+  },
+  {
+    "id": 28,
+    "code": "NXA",
+    "name": "宁夏",
+    "children": null
+  },
+  {
+    "id": 29,
+    "code": "YNN",
+    "name": "云南",
+    "children": null
+  },
+  {
+    "id": 30,
+    "code": "ZJG",
+    "name": "浙江",
+    "children": null
+  },
+  {
+    "id": 31,
+    "code": "SHA",
+    "name": "上海",
+    "children": null
+  },
+  {
+    "id": 32,
+    "code": "MAC",
+    "name": "中国澳门",
+    "children": null
+  },
+  {
+    "id": 33,
+    "code": "HKG",
+    "name": "中国香港",
+    "children": null
+  }
+]

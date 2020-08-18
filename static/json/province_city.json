@@ -1,0 +1,3767 @@
+[
+  {
+    "id": 1,
+    "code": "QHI",
+    "name": "青海",
+    "children": [
+      {
+        "id": 238,
+        "code": "XNG",
+        "name": "西宁",
+        "children": null
+      },
+      {
+        "id": 426,
+        "code": "YUS",
+        "name": "玉树",
+        "children": null
+      },
+      {
+        "id": 523,
+        "code": "H",
+        "name": "海东地区",
+        "children": null
+      },
+      {
+        "id": 524,
+        "code": "HB",
+        "name": "海北藏族自治州",
+        "children": null
+      },
+      {
+        "id": 525,
+        "code": "HN",
+        "name": "黄南藏族自治州",
+        "children": null
+      },
+      {
+        "id": 526,
+        "code": "HANHN",
+        "name": "海南藏族自治州",
+        "children": null
+      },
+      {
+        "id": 527,
+        "code": "GL",
+        "name": "果洛藏族自治州",
+        "children": null
+      },
+      {
+        "id": 528,
+        "code": "YS",
+        "name": "玉树藏族自治州",
+        "children": null
+      },
+      {
+        "id": 529,
+        "code": "HX",
+        "name": "海西蒙古族藏族自治州",
+        "children": null
+      },
+      {
+        "id": 563,
+        "code": "GOQ",
+        "name": "格尔木",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "SCN",
+    "name": "四川",
+    "children": [
+      {
+        "id": 218,
+        "code": "PZH",
+        "name": "攀枝花",
+        "children": null
+      },
+      {
+        "id": 219,
+        "code": "ZGG",
+        "name": "自贡",
+        "children": null
+      },
+      {
+        "id": 220,
+        "code": "LSN",
+        "name": "乐山",
+        "children": null
+      },
+      {
+        "id": 221,
+        "code": "JZG",
+        "name": "九寨沟",
+        "children": null
+      },
+      {
+        "id": 222,
+        "code": "GUA",
+        "name": "广安",
+        "children": null
+      },
+      {
+        "id": 223,
+        "code": "NAC",
+        "name": "南充",
+        "children": null
+      },
+      {
+        "id": 224,
+        "code": "DJY",
+        "name": "都江堰",
+        "children": null
+      },
+      {
+        "id": 225,
+        "code": "YAA",
+        "name": "雅安",
+        "children": null
+      },
+      {
+        "id": 226,
+        "code": "NEJ",
+        "name": "内江",
+        "children": null
+      },
+      {
+        "id": 227,
+        "code": "XIC",
+        "name": "西昌",
+        "children": null
+      },
+      {
+        "id": 228,
+        "code": "GUY",
+        "name": "广元",
+        "children": null
+      },
+      {
+        "id": 229,
+        "code": "HLG",
+        "name": "海螺沟",
+        "children": null
+      },
+      {
+        "id": 230,
+        "code": "LUZ",
+        "name": "泸州",
+        "children": null
+      },
+      {
+        "id": 231,
+        "code": "SUN",
+        "name": "遂宁",
+        "children": null
+      },
+      {
+        "id": 232,
+        "code": "YIB",
+        "name": "宜宾",
+        "children": null
+      },
+      {
+        "id": 233,
+        "code": "JIQ",
+        "name": "江油",
+        "children": null
+      },
+      {
+        "id": 234,
+        "code": "DEY",
+        "name": "德阳",
+        "children": null
+      },
+      {
+        "id": 235,
+        "code": "EMS",
+        "name": "峨眉山",
+        "children": null
+      },
+      {
+        "id": 236,
+        "code": "MYG",
+        "name": "绵阳",
+        "children": null
+      },
+      {
+        "id": 237,
+        "code": "CTU",
+        "name": "成都",
+        "children": null
+      },
+      {
+        "id": 381,
+        "code": "DAX",
+        "name": "达州",
+        "children": null
+      },
+      {
+        "id": 382,
+        "code": "GHN",
+        "name": "广汉",
+        "children": null
+      },
+      {
+        "id": 423,
+        "code": "KGT",
+        "name": "康定",
+        "children": null
+      },
+      {
+        "id": 450,
+        "code": "MEK",
+        "name": "马尔康",
+        "children": null
+      },
+      {
+        "id": 451,
+        "code": "BCH",
+        "name": "北川",
+        "children": null
+      },
+      {
+        "id": 452,
+        "code": "LZHG",
+        "name": "阆中",
+        "children": null
+      },
+      {
+        "id": 471,
+        "code": "MS",
+        "name": "眉山",
+        "children": null
+      },
+      {
+        "id": 472,
+        "code": "BZ",
+        "name": "巴中",
+        "children": null
+      },
+      {
+        "id": 473,
+        "code": "ZY",
+        "name": "资阳",
+        "children": null
+      },
+      {
+        "id": 474,
+        "code": "AB",
+        "name": "阿坝藏族羌族自治州",
+        "children": null
+      },
+      {
+        "id": 475,
+        "code": "GZ",
+        "name": "甘孜藏族自治州",
+        "children": null
+      },
+      {
+        "id": 476,
+        "code": "LS",
+        "name": "凉山彝族自治州",
+        "children": null
+      },
+      {
+        "id": 545,
+        "code": "WXN",
+        "name": "万县",
+        "children": null
+      },
+      {
+        "id": 554,
+        "code": "LUDG",
+        "name": "泸定",
+        "children": null
+      },
+      {
+        "id": 584,
+        "code": "MX",
+        "name": "茂县",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "SDG",
+    "name": "山东",
+    "children": [
+      {
+        "id": 200,
+        "code": "WEH",
+        "name": "威海",
+        "children": null
+      },
+      {
+        "id": 201,
+        "code": "PLI",
+        "name": "蓬莱",
+        "children": null
+      },
+      {
+        "id": 202,
+        "code": "RZO",
+        "name": "日照",
+        "children": null
+      },
+      {
+        "id": 203,
+        "code": "TAN",
+        "name": "泰安",
+        "children": null
+      },
+      {
+        "id": 204,
+        "code": "TAO",
+        "name": "青岛",
+        "children": null
+      },
+      {
+        "id": 205,
+        "code": "WEF",
+        "name": "潍坊",
+        "children": null
+      },
+      {
+        "id": 206,
+        "code": "ZBO",
+        "name": "淄博",
+        "children": null
+      },
+      {
+        "id": 207,
+        "code": "BIZ",
+        "name": "滨州",
+        "children": null
+      },
+      {
+        "id": 208,
+        "code": "JIO",
+        "name": "即墨",
+        "children": null
+      },
+      {
+        "id": 209,
+        "code": "LQI",
+        "name": "临沂",
+        "children": null
+      },
+      {
+        "id": 210,
+        "code": "QF",
+        "name": "曲阜",
+        "children": null
+      },
+      {
+        "id": 211,
+        "code": "DOY",
+        "name": "东营",
+        "children": null
+      },
+      {
+        "id": 212,
+        "code": "JIN",
+        "name": "济宁",
+        "children": null
+      },
+      {
+        "id": 213,
+        "code": "SOG",
+        "name": "寿光",
+        "children": null
+      },
+      {
+        "id": 214,
+        "code": "JZO",
+        "name": "胶州",
+        "children": null
+      },
+      {
+        "id": 215,
+        "code": "DEZ",
+        "name": "德州",
+        "children": null
+      },
+      {
+        "id": 216,
+        "code": "YNT",
+        "name": "烟台",
+        "children": null
+      },
+      {
+        "id": 217,
+        "code": "TNA",
+        "name": "济南",
+        "children": null
+      },
+      {
+        "id": 385,
+        "code": "ZOZ",
+        "name": "枣庄",
+        "children": null
+      },
+      {
+        "id": 388,
+        "code": "HZE",
+        "name": "菏泽",
+        "children": null
+      },
+      {
+        "id": 389,
+        "code": "LAC",
+        "name": "聊城",
+        "children": null
+      },
+      {
+        "id": 403,
+        "code": "WDS",
+        "name": "文登",
+        "children": null
+      },
+      {
+        "id": 404,
+        "code": "JNS",
+        "name": "胶南",
+        "children": null
+      },
+      {
+        "id": 406,
+        "code": "FIC",
+        "name": "肥城",
+        "children": null
+      },
+      {
+        "id": 407,
+        "code": "QINZ",
+        "name": "青州",
+        "children": null
+      },
+      {
+        "id": 408,
+        "code": "LOK",
+        "name": "龙口",
+        "children": null
+      },
+      {
+        "id": 409,
+        "code": "PIND",
+        "name": "平度",
+        "children": null
+      },
+      {
+        "id": 410,
+        "code": "LYAN",
+        "name": "莱芜",
+        "children": null
+      },
+      {
+        "id": 411,
+        "code": "HIYA",
+        "name": "海阳",
+        "children": null
+      },
+      {
+        "id": 424,
+        "code": "LYN",
+        "name": "莱阳",
+        "children": null
+      },
+      {
+        "id": 430,
+        "code": "YZU",
+        "name": "兖州",
+        "children": null
+      },
+      {
+        "id": 431,
+        "code": "LXI",
+        "name": "莱西",
+        "children": null
+      },
+      {
+        "id": 432,
+        "code": "XJN",
+        "name": "夏津",
+        "children": null
+      },
+      {
+        "id": 433,
+        "code": "RONC",
+        "name": "荣成",
+        "children": null
+      },
+      {
+        "id": 435,
+        "code": "BOX",
+        "name": "博兴",
+        "children": null
+      },
+      {
+        "id": 436,
+        "code": "ZHUC",
+        "name": "诸城",
+        "children": null
+      },
+      {
+        "id": 439,
+        "code": "ZQS",
+        "name": "章丘",
+        "children": null
+      },
+      {
+        "id": 440,
+        "code": "CDX",
+        "name": "长岛",
+        "children": null
+      },
+      {
+        "id": 441,
+        "code": "DMS",
+        "name": "东明",
+        "children": null
+      },
+      {
+        "id": 442,
+        "code": "GMS",
+        "name": "高密",
+        "children": null
+      },
+      {
+        "id": 443,
+        "code": "PYS",
+        "name": "平邑",
+        "children": null
+      },
+      {
+        "id": 544,
+        "code": "QXA",
+        "name": "栖霞",
+        "children": null
+      },
+      {
+        "id": 550,
+        "code": "RSS",
+        "name": "乳山",
+        "children": null
+      },
+      {
+        "id": 566,
+        "code": "ZPX",
+        "name": "邹平",
+        "children": null
+      },
+      {
+        "id": 576,
+        "code": "ZYS",
+        "name": "招远",
+        "children": null
+      },
+      {
+        "id": 577,
+        "code": "YSS",
+        "name": "沂水",
+        "children": null
+      },
+      {
+        "id": 578,
+        "code": "ZCS",
+        "name": "邹城",
+        "children": null
+      },
+      {
+        "id": 580,
+        "code": "LAIZ",
+        "name": "莱州",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "code": "SHX",
+    "name": "山西",
+    "children": [
+      {
+        "id": 190,
+        "code": "JOZ",
+        "name": "晋中",
+        "children": null
+      },
+      {
+        "id": 191,
+        "code": "JIC",
+        "name": "晋城",
+        "children": null
+      },
+      {
+        "id": 192,
+        "code": "WU",
+        "name": "五台山",
+        "children": null
+      },
+      {
+        "id": 193,
+        "code": "YQU",
+        "name": "阳泉",
+        "children": null
+      },
+      {
+        "id": 194,
+        "code": "LIF",
+        "name": "临汾",
+        "children": null
+      },
+      {
+        "id": 195,
+        "code": "XIZ",
+        "name": "忻州",
+        "children": null
+      },
+      {
+        "id": 196,
+        "code": "PYO",
+        "name": "平遥",
+        "children": null
+      },
+      {
+        "id": 197,
+        "code": "YUC",
+        "name": "运城",
+        "children": null
+      },
+      {
+        "id": 198,
+        "code": "DTG",
+        "name": "大同",
+        "children": null
+      },
+      {
+        "id": 199,
+        "code": "TYN",
+        "name": "太原",
+        "children": null
+      },
+      {
+        "id": 379,
+        "code": "CIH",
+        "name": "长治",
+        "children": null
+      },
+      {
+        "id": 478,
+        "code": "SZSX",
+        "name": "朔州",
+        "children": null
+      },
+      {
+        "id": 479,
+        "code": "LL",
+        "name": "吕梁",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "code": "SXI",
+    "name": "陕西",
+    "children": [
+      {
+        "id": 182,
+        "code": "XYG",
+        "name": "咸阳",
+        "children": null
+      },
+      {
+        "id": 183,
+        "code": "YLN",
+        "name": "榆林",
+        "children": null
+      },
+      {
+        "id": 184,
+        "code": "XIA",
+        "name": "西安",
+        "children": null
+      },
+      {
+        "id": 185,
+        "code": "HCN",
+        "name": "韩城",
+        "children": null
+      },
+      {
+        "id": 186,
+        "code": "HAZ",
+        "name": "汉中",
+        "children": null
+      },
+      {
+        "id": 187,
+        "code": "SMU",
+        "name": "神木",
+        "children": null
+      },
+      {
+        "id": 188,
+        "code": "BJI",
+        "name": "宝鸡",
+        "children": null
+      },
+      {
+        "id": 189,
+        "code": "YAN",
+        "name": "延安",
+        "children": null
+      },
+      {
+        "id": 380,
+        "code": "AKA",
+        "name": "安康",
+        "children": null
+      },
+      {
+        "id": 512,
+        "code": "TC",
+        "name": "铜川",
+        "children": null
+      },
+      {
+        "id": 513,
+        "code": "WN",
+        "name": "渭南",
+        "children": null
+      },
+      {
+        "id": 514,
+        "code": "SL",
+        "name": "商洛",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "code": "TSN",
+    "name": "天津",
+    "children": [
+      {
+        "id": 155,
+        "code": "TSN",
+        "name": "天津",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "code": "XJG",
+    "name": "新疆",
+    "children": [
+      {
+        "id": 173,
+        "code": "YIN",
+        "name": "伊宁",
+        "children": null
+      },
+      {
+        "id": 174,
+        "code": "ALT",
+        "name": "阿勒泰",
+        "children": null
+      },
+      {
+        "id": 175,
+        "code": "KLM",
+        "name": "克拉玛依",
+        "children": null
+      },
+      {
+        "id": 176,
+        "code": "TLF",
+        "name": "吐鲁番",
+        "children": null
+      },
+      {
+        "id": 177,
+        "code": "KEL",
+        "name": "库尔勒",
+        "children": null
+      },
+      {
+        "id": 178,
+        "code": "BEJ",
+        "name": "布尔津",
+        "children": null
+      },
+      {
+        "id": 179,
+        "code": "KNS",
+        "name": "喀纳斯",
+        "children": null
+      },
+      {
+        "id": 180,
+        "code": "KAS",
+        "name": "喀什",
+        "children": null
+      },
+      {
+        "id": 181,
+        "code": "URS",
+        "name": "乌鲁木齐",
+        "children": null
+      },
+      {
+        "id": 383,
+        "code": "AKU",
+        "name": "阿克苏",
+        "children": null
+      },
+      {
+        "id": 384,
+        "code": "FYN",
+        "name": "富蕴",
+        "children": null
+      },
+      {
+        "id": 386,
+        "code": "HMI",
+        "name": "哈密",
+        "children": null
+      },
+      {
+        "id": 387,
+        "code": "HTN",
+        "name": "和田",
+        "children": null
+      },
+      {
+        "id": 390,
+        "code": "KCA",
+        "name": "库车",
+        "children": null
+      },
+      {
+        "id": 391,
+        "code": "IQM",
+        "name": "且末",
+        "children": null
+      },
+      {
+        "id": 392,
+        "code": "TAG",
+        "name": "塔城",
+        "children": null
+      },
+      {
+        "id": 414,
+        "code": "BYGL",
+        "name": "巴音郭楞蒙古自治州",
+        "children": null
+      },
+      {
+        "id": 415,
+        "code": "KZLSKRK",
+        "name": "克孜勒苏柯尔克孜自治州",
+        "children": null
+      },
+      {
+        "id": 416,
+        "code": "YLHSK",
+        "name": "伊犁哈萨克自治州",
+        "children": null
+      },
+      {
+        "id": 417,
+        "code": "SHZXJ",
+        "name": "石河子市",
+        "children": null
+      },
+      {
+        "id": 418,
+        "code": "ALR",
+        "name": "阿拉尔",
+        "children": null
+      },
+      {
+        "id": 419,
+        "code": "TMSK",
+        "name": "图木舒克",
+        "children": null
+      },
+      {
+        "id": 420,
+        "code": "WJQ",
+        "name": "五家渠",
+        "children": null
+      },
+      {
+        "id": 421,
+        "code": "NLT",
+        "name": "那拉提",
+        "children": null
+      },
+      {
+        "id": 541,
+        "code": "CJ",
+        "name": "昌吉回族自治州",
+        "children": null
+      },
+      {
+        "id": 542,
+        "code": "BET",
+        "name": "博尔塔拉蒙古自治州",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "code": "XZG",
+    "name": "西藏",
+    "children": [
+      {
+        "id": 169,
+        "code": "ALI",
+        "name": "阿里",
+        "children": null
+      },
+      {
+        "id": 170,
+        "code": "RKZ",
+        "name": "日喀则",
+        "children": null
+      },
+      {
+        "id": 171,
+        "code": "LZ",
+        "name": "林芝",
+        "children": null
+      },
+      {
+        "id": 172,
+        "code": "LSA",
+        "name": "拉萨",
+        "children": null
+      },
+      {
+        "id": 530,
+        "code": "CD",
+        "name": "昌都地区",
+        "children": null
+      },
+      {
+        "id": 531,
+        "code": "SN",
+        "name": "山南地区",
+        "children": null
+      },
+      {
+        "id": 532,
+        "code": "NQ",
+        "name": "那曲地区",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "code": "BJ",
+    "name": "北京",
+    "children": [
+      {
+        "id": 110,
+        "code": "PEK",
+        "name": "北京",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "code": "FJN",
+    "name": "福建",
+    "children": [
+      {
+        "id": 324,
+        "code": "FOC",
+        "name": "福州",
+        "children": null
+      },
+      {
+        "id": 325,
+        "code": "ZHA",
+        "name": "漳州",
+        "children": null
+      },
+      {
+        "id": 326,
+        "code": "CLE",
+        "name": "长乐",
+        "children": null
+      },
+      {
+        "id": 327,
+        "code": "FUD",
+        "name": "福鼎",
+        "children": null
+      },
+      {
+        "id": 328,
+        "code": "SIS",
+        "name": "石狮",
+        "children": null
+      },
+      {
+        "id": 329,
+        "code": "NID",
+        "name": "宁德",
+        "children": null
+      },
+      {
+        "id": 330,
+        "code": "LNY",
+        "name": "龙岩",
+        "children": null
+      },
+      {
+        "id": 331,
+        "code": "JIJ",
+        "name": "晋江",
+        "children": null
+      },
+      {
+        "id": 332,
+        "code": "YOA",
+        "name": "永安",
+        "children": null
+      },
+      {
+        "id": 333,
+        "code": "SMI",
+        "name": "三明",
+        "children": null
+      },
+      {
+        "id": 334,
+        "code": "NAP",
+        "name": "南平",
+        "children": null
+      },
+      {
+        "id": 335,
+        "code": "QGA",
+        "name": "泉港",
+        "children": null
+      },
+      {
+        "id": 336,
+        "code": "AXI",
+        "name": "安溪",
+        "children": null
+      },
+      {
+        "id": 337,
+        "code": "NAN",
+        "name": "南安",
+        "children": null
+      },
+      {
+        "id": 338,
+        "code": "DSH",
+        "name": "东山",
+        "children": null
+      },
+      {
+        "id": 339,
+        "code": "HAN",
+        "name": "惠安",
+        "children": null
+      },
+      {
+        "id": 340,
+        "code": "FUQ",
+        "name": "福清",
+        "children": null
+      },
+      {
+        "id": 341,
+        "code": "LHA",
+        "name": "龙海",
+        "children": null
+      },
+      {
+        "id": 342,
+        "code": "SNI",
+        "name": "寿宁",
+        "children": null
+      },
+      {
+        "id": 343,
+        "code": "DHU",
+        "name": "德化",
+        "children": null
+      },
+      {
+        "id": 344,
+        "code": "YPI",
+        "name": "延平",
+        "children": null
+      },
+      {
+        "id": 345,
+        "code": "PUT",
+        "name": "莆田",
+        "children": null
+      },
+      {
+        "id": 346,
+        "code": "LIC",
+        "name": "连城",
+        "children": null
+      },
+      {
+        "id": 347,
+        "code": "QHU",
+        "name": "泉州",
+        "children": null
+      },
+      {
+        "id": 348,
+        "code": "WUS",
+        "name": "武夷山",
+        "children": null
+      },
+      {
+        "id": 349,
+        "code": "XMN",
+        "name": "厦门",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "code": "AHI",
+    "name": "安徽",
+    "children": [
+      {
+        "id": 98,
+        "code": "AQG",
+        "name": "安庆",
+        "children": null
+      },
+      {
+        "id": 99,
+        "code": "JHS",
+        "name": "九华山",
+        "children": null
+      },
+      {
+        "id": 100,
+        "code": "BUY",
+        "name": "阜阳",
+        "children": null
+      },
+      {
+        "id": 101,
+        "code": "HAB",
+        "name": "淮北",
+        "children": null
+      },
+      {
+        "id": 102,
+        "code": "TZS",
+        "name": "天柱山",
+        "children": null
+      },
+      {
+        "id": 103,
+        "code": "HNA",
+        "name": "淮南",
+        "children": null
+      },
+      {
+        "id": 104,
+        "code": "CZH",
+        "name": "滁州",
+        "children": null
+      },
+      {
+        "id": 105,
+        "code": "COH",
+        "name": "巢湖",
+        "children": null
+      },
+      {
+        "id": 106,
+        "code": "BBU",
+        "name": "蚌埠",
+        "children": null
+      },
+      {
+        "id": 107,
+        "code": "TXN",
+        "name": "黄山",
+        "children": null
+      },
+      {
+        "id": 354,
+        "code": "HFE",
+        "name": "合肥",
+        "children": null
+      },
+      {
+        "id": 359,
+        "code": "WHU",
+        "name": "芜湖",
+        "children": null
+      },
+      {
+        "id": 400,
+        "code": "MAS",
+        "name": "马鞍山",
+        "children": null
+      },
+      {
+        "id": 485,
+        "code": "TL",
+        "name": "铜陵",
+        "children": null
+      },
+      {
+        "id": 486,
+        "code": "SZAH",
+        "name": "宿州",
+        "children": null
+      },
+      {
+        "id": 487,
+        "code": "LA",
+        "name": "六安",
+        "children": null
+      },
+      {
+        "id": 488,
+        "code": "HZ",
+        "name": "亳州",
+        "children": null
+      },
+      {
+        "id": 489,
+        "code": "CZAH",
+        "name": "池州",
+        "children": null
+      },
+      {
+        "id": 490,
+        "code": "XC",
+        "name": "宣城",
+        "children": null
+      },
+      {
+        "id": 547,
+        "code": "GC",
+        "name": "贵池",
+        "children": null
+      },
+      {
+        "id": 573,
+        "code": "NIG",
+        "name": "宁国",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "code": "CKG",
+    "name": "重庆",
+    "children": [
+      {
+        "id": 97,
+        "code": "CKG",
+        "name": "重庆",
+        "children": null
+      },
+      {
+        "id": 564,
+        "code": "ZHB",
+        "name": "舟白",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "code": "GDN",
+    "name": "广东",
+    "children": [
+      {
+        "id": 108,
+        "code": "YJI",
+        "name": "阳江",
+        "children": null
+      },
+      {
+        "id": 109,
+        "code": "CAN",
+        "name": "广州",
+        "children": null
+      },
+      {
+        "id": 300,
+        "code": "SZX",
+        "name": "深圳",
+        "children": null
+      },
+      {
+        "id": 301,
+        "code": "SWA",
+        "name": "汕头",
+        "children": null
+      },
+      {
+        "id": 302,
+        "code": "FOH",
+        "name": "佛山",
+        "children": null
+      },
+      {
+        "id": 303,
+        "code": "QIN",
+        "name": "清远",
+        "children": null
+      },
+      {
+        "id": 304,
+        "code": "PLN",
+        "name": "普宁",
+        "children": null
+      },
+      {
+        "id": 305,
+        "code": "HEY",
+        "name": "河源",
+        "children": null
+      },
+      {
+        "id": 306,
+        "code": "HUI",
+        "name": "惠州",
+        "children": null
+      },
+      {
+        "id": 307,
+        "code": "TSH",
+        "name": "台山",
+        "children": null
+      },
+      {
+        "id": 308,
+        "code": "ZHH",
+        "name": "珠海",
+        "children": null
+      },
+      {
+        "id": 309,
+        "code": "YID",
+        "name": "英德",
+        "children": null
+      },
+      {
+        "id": 310,
+        "code": "YFU",
+        "name": "云浮",
+        "children": null
+      },
+      {
+        "id": 311,
+        "code": "CHY",
+        "name": "潮阳",
+        "children": null
+      },
+      {
+        "id": 312,
+        "code": "HSO",
+        "name": "鹤山",
+        "children": null
+      },
+      {
+        "id": 313,
+        "code": "MEZ",
+        "name": "梅州",
+        "children": null
+      },
+      {
+        "id": 314,
+        "code": "SHG",
+        "name": "韶关",
+        "children": null
+      },
+      {
+        "id": 315,
+        "code": "ZHQ",
+        "name": "肇庆",
+        "children": null
+      },
+      {
+        "id": 316,
+        "code": "ZHJ",
+        "name": "湛江",
+        "children": null
+      },
+      {
+        "id": 317,
+        "code": "KPG",
+        "name": "开平",
+        "children": null
+      },
+      {
+        "id": 318,
+        "code": "CHE",
+        "name": "潮州",
+        "children": null
+      },
+      {
+        "id": 319,
+        "code": "SWB",
+        "name": "澄海",
+        "children": null
+      },
+      {
+        "id": 320,
+        "code": "DNG",
+        "name": "东莞",
+        "children": null
+      },
+      {
+        "id": 321,
+        "code": "JMO",
+        "name": "江门",
+        "children": null
+      },
+      {
+        "id": 322,
+        "code": "ZSO",
+        "name": "中山",
+        "children": null
+      },
+      {
+        "id": 323,
+        "code": "EPG",
+        "name": "恩平",
+        "children": null
+      },
+      {
+        "id": 365,
+        "code": "JIY",
+        "name": "揭阳",
+        "children": null
+      },
+      {
+        "id": 401,
+        "code": "YCH",
+        "name": "阳春",
+        "children": null
+      },
+      {
+        "id": 447,
+        "code": "SHW",
+        "name": "汕尾",
+        "children": null
+      },
+      {
+        "id": 448,
+        "code": "MMI",
+        "name": "茂名",
+        "children": null
+      },
+      {
+        "id": 468,
+        "code": "NSH",
+        "name": "南山",
+        "children": null
+      },
+      {
+        "id": 505,
+        "code": "ZC",
+        "name": "增城",
+        "children": null
+      },
+      {
+        "id": 506,
+        "code": "CH",
+        "name": "从化",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "code": "GSU",
+    "name": "甘肃",
+    "children": [
+      {
+        "id": 95,
+        "code": "ZHY",
+        "name": "张掖",
+        "children": null
+      },
+      {
+        "id": 96,
+        "code": "DNH",
+        "name": "敦煌",
+        "children": null
+      },
+      {
+        "id": 364,
+        "code": "LHW",
+        "name": "兰州",
+        "children": null
+      },
+      {
+        "id": 367,
+        "code": "JGN",
+        "name": "嘉峪关",
+        "children": null
+      },
+      {
+        "id": 368,
+        "code": "CHW",
+        "name": "酒泉",
+        "children": null
+      },
+      {
+        "id": 369,
+        "code": "IQN",
+        "name": "庆阳",
+        "children": null
+      },
+      {
+        "id": 459,
+        "code": "TINS",
+        "name": "天水",
+        "children": null
+      },
+      {
+        "id": 515,
+        "code": "JC",
+        "name": "金昌",
+        "children": null
+      },
+      {
+        "id": 516,
+        "code": "BY",
+        "name": "白银",
+        "children": null
+      },
+      {
+        "id": 517,
+        "code": "WW",
+        "name": "武威",
+        "children": null
+      },
+      {
+        "id": 518,
+        "code": "PL",
+        "name": "平凉",
+        "children": null
+      },
+      {
+        "id": 519,
+        "code": "DX",
+        "name": "定西",
+        "children": null
+      },
+      {
+        "id": 520,
+        "code": "LN",
+        "name": "陇南",
+        "children": null
+      },
+      {
+        "id": 521,
+        "code": "LX",
+        "name": "临夏回族自治州",
+        "children": null
+      },
+      {
+        "id": 522,
+        "code": "GN",
+        "name": "甘南藏族自治州",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "code": "GXI",
+    "name": "广西",
+    "children": [
+      {
+        "id": 82,
+        "code": "YAS",
+        "name": "阳朔",
+        "children": null
+      },
+      {
+        "id": 83,
+        "code": "WZ",
+        "name": "梧州",
+        "children": null
+      },
+      {
+        "id": 84,
+        "code": "YUL",
+        "name": "玉林",
+        "children": null
+      },
+      {
+        "id": 85,
+        "code": "HEZ",
+        "name": "贺州",
+        "children": null
+      },
+      {
+        "id": 86,
+        "code": "FGC",
+        "name": "防城港",
+        "children": null
+      },
+      {
+        "id": 87,
+        "code": "QZH",
+        "name": "钦州",
+        "children": null
+      },
+      {
+        "id": 88,
+        "code": "HCH",
+        "name": "河池",
+        "children": null
+      },
+      {
+        "id": 89,
+        "code": "BAS",
+        "name": "百色",
+        "children": null
+      },
+      {
+        "id": 90,
+        "code": "GUG",
+        "name": "贵港",
+        "children": null
+      },
+      {
+        "id": 91,
+        "code": "NNG",
+        "name": "南宁",
+        "children": null
+      },
+      {
+        "id": 92,
+        "code": "LZH",
+        "name": "柳州",
+        "children": null
+      },
+      {
+        "id": 93,
+        "code": "KWL",
+        "name": "桂林",
+        "children": null
+      },
+      {
+        "id": 94,
+        "code": "BHY",
+        "name": "北海",
+        "children": null
+      },
+      {
+        "id": 428,
+        "code": "ZYX",
+        "name": "资源县",
+        "children": null
+      },
+      {
+        "id": 536,
+        "code": "LB",
+        "name": "来宾",
+        "children": null
+      },
+      {
+        "id": 537,
+        "code": "CZGX",
+        "name": "崇左",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "code": "GZU",
+    "name": "贵州",
+    "children": [
+      {
+        "id": 73,
+        "code": "ZYI",
+        "name": "遵义",
+        "children": null
+      },
+      {
+        "id": 74,
+        "code": "KAL",
+        "name": "凯里",
+        "children": null
+      },
+      {
+        "id": 75,
+        "code": "LPS",
+        "name": "六盘水",
+        "children": null
+      },
+      {
+        "id": 76,
+        "code": "DYU",
+        "name": "都匀",
+        "children": null
+      },
+      {
+        "id": 77,
+        "code": "BJE",
+        "name": "毕节",
+        "children": null
+      },
+      {
+        "id": 78,
+        "code": "TRE",
+        "name": "铜仁",
+        "children": null
+      },
+      {
+        "id": 79,
+        "code": "ANS",
+        "name": "安顺",
+        "children": null
+      },
+      {
+        "id": 80,
+        "code": "KWE",
+        "name": "贵阳",
+        "children": null
+      },
+      {
+        "id": 81,
+        "code": "XYI",
+        "name": "兴义",
+        "children": null
+      },
+      {
+        "id": 412,
+        "code": "RHU",
+        "name": "仁怀市",
+        "children": null
+      },
+      {
+        "id": 425,
+        "code": "LLB",
+        "name": "荔波",
+        "children": null
+      },
+      {
+        "id": 507,
+        "code": "XD",
+        "name": "黔东南苗族侗族自治州",
+        "children": null
+      },
+      {
+        "id": 508,
+        "code": "QN",
+        "name": "黔南布依族苗族自治州",
+        "children": null
+      },
+      {
+        "id": 546,
+        "code": "HZH",
+        "name": "黎平",
+        "children": null
+      },
+      {
+        "id": 582,
+        "code": "XX",
+        "name": "黔西南布依族苗族自治州",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "code": "HAN",
+    "name": "海南",
+    "children": [
+      {
+        "id": 60,
+        "code": "SYX",
+        "name": "三亚",
+        "children": null
+      },
+      {
+        "id": 61,
+        "code": "HAK",
+        "name": "海口",
+        "children": null
+      },
+      {
+        "id": 62,
+        "code": "XGL",
+        "name": "万宁",
+        "children": null
+      },
+      {
+        "id": 63,
+        "code": "QIH",
+        "name": "琼海",
+        "children": null
+      },
+      {
+        "id": 64,
+        "code": "LNS",
+        "name": "陵水",
+        "children": null
+      },
+      {
+        "id": 65,
+        "code": "TOS",
+        "name": "五指山",
+        "children": null
+      },
+      {
+        "id": 66,
+        "code": "WAN",
+        "name": "保亭",
+        "children": null
+      },
+      {
+        "id": 67,
+        "code": "CMA",
+        "name": "澄迈县",
+        "children": null
+      },
+      {
+        "id": 68,
+        "code": "DIA",
+        "name": "定安县",
+        "children": null
+      },
+      {
+        "id": 69,
+        "code": "DOA",
+        "name": "东方",
+        "children": null
+      },
+      {
+        "id": 70,
+        "code": "WEC",
+        "name": "文昌",
+        "children": null
+      },
+      {
+        "id": 71,
+        "code": "DAZ",
+        "name": "儋州",
+        "children": null
+      },
+      {
+        "id": 72,
+        "code": "BAO",
+        "name": "博鳌",
+        "children": null
+      },
+      {
+        "id": 555,
+        "code": "LD",
+        "name": "乐东黎族自治县",
+        "children": null
+      },
+      {
+        "id": 575,
+        "code": "YXG",
+        "name": "西沙",
+        "children": null
+      },
+      {
+        "id": 585,
+        "code": "baishalizuzizhixian",
+        "name": "白沙黎族自治县",
+        "children": null
+      },
+      {
+        "id": 586,
+        "code": "changjianglizuzizhixian",
+        "name": "昌江黎族自治县",
+        "children": null
+      },
+      {
+        "id": 587,
+        "code": "lingaoxian",
+        "name": "临高县",
+        "children": null
+      },
+      {
+        "id": 588,
+        "code": "qiongzhonglizumiaozuzizhixian",
+        "name": "琼中黎族苗族自治县",
+        "children": null
+      },
+      {
+        "id": 589,
+        "code": "sanshashi",
+        "name": "三沙市",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "code": "HBI",
+    "name": "湖北",
+    "children": [
+      {
+        "id": 53,
+        "code": "YIH",
+        "name": "宜昌",
+        "children": null
+      },
+      {
+        "id": 54,
+        "code": "ENS",
+        "name": "恩施",
+        "children": null
+      },
+      {
+        "id": 55,
+        "code": "JIM",
+        "name": "荆门",
+        "children": null
+      },
+      {
+        "id": 56,
+        "code": "JZH",
+        "name": "荆州",
+        "children": null
+      },
+      {
+        "id": 57,
+        "code": "XFG",
+        "name": "襄阳",
+        "children": null
+      },
+      {
+        "id": 58,
+        "code": "SYN",
+        "name": "十堰",
+        "children": null
+      },
+      {
+        "id": 59,
+        "code": "WUH",
+        "name": "武汉",
+        "children": null
+      },
+      {
+        "id": 370,
+        "code": "SAS",
+        "name": "沙市",
+        "children": null
+      },
+      {
+        "id": 495,
+        "code": "HS",
+        "name": "黄石",
+        "children": null
+      },
+      {
+        "id": 496,
+        "code": "EZ",
+        "name": "鄂州",
+        "children": null
+      },
+      {
+        "id": 497,
+        "code": "XG",
+        "name": "孝感",
+        "children": null
+      },
+      {
+        "id": 498,
+        "code": "HG",
+        "name": "黄冈",
+        "children": null
+      },
+      {
+        "id": 499,
+        "code": "XN",
+        "name": "咸宁",
+        "children": null
+      },
+      {
+        "id": 500,
+        "code": "SZ",
+        "name": "随州",
+        "children": null
+      },
+      {
+        "id": 501,
+        "code": "XT",
+        "name": "仙桃",
+        "children": null
+      },
+      {
+        "id": 502,
+        "code": "QJ",
+        "name": "潜江",
+        "children": null
+      },
+      {
+        "id": 503,
+        "code": "TM",
+        "name": "天门",
+        "children": null
+      },
+      {
+        "id": 504,
+        "code": "SNJLQ",
+        "name": "神农架林区",
+        "children": null
+      },
+      {
+        "id": 556,
+        "code": "CBI",
+        "name": "赤壁",
+        "children": null
+      },
+      {
+        "id": 557,
+        "code": "DYE",
+        "name": "大冶",
+        "children": null
+      },
+      {
+        "id": 558,
+        "code": "YICH",
+        "name": "应城",
+        "children": null
+      },
+      {
+        "id": 559,
+        "code": "ZHXI",
+        "name": "钟祥",
+        "children": null
+      },
+      {
+        "id": 570,
+        "code": "LICH",
+        "name": "利川市",
+        "children": null
+      },
+      {
+        "id": 572,
+        "code": "HHS",
+        "name": "洪湖",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "code": "HEB",
+    "name": "河北",
+    "children": [
+      {
+        "id": 38,
+        "code": "TNS",
+        "name": "唐山",
+        "children": null
+      },
+      {
+        "id": 39,
+        "code": "BDH",
+        "name": "北戴河",
+        "children": null
+      },
+      {
+        "id": 40,
+        "code": "CDE",
+        "name": "承德",
+        "children": null
+      },
+      {
+        "id": 41,
+        "code": "BDG",
+        "name": "保定",
+        "children": null
+      },
+      {
+        "id": 42,
+        "code": "HDN",
+        "name": "邯郸",
+        "children": null
+      },
+      {
+        "id": 43,
+        "code": "HES",
+        "name": "衡水",
+        "children": null
+      },
+      {
+        "id": 44,
+        "code": "NDH",
+        "name": "南戴河",
+        "children": null
+      },
+      {
+        "id": 45,
+        "code": "CHL",
+        "name": "昌黎",
+        "children": null
+      },
+      {
+        "id": 46,
+        "code": "SAH",
+        "name": "三河",
+        "children": null
+      },
+      {
+        "id": 47,
+        "code": "REQ",
+        "name": "任丘",
+        "children": null
+      },
+      {
+        "id": 48,
+        "code": "PSX",
+        "name": "平山县",
+        "children": null
+      },
+      {
+        "id": 49,
+        "code": "XTA",
+        "name": "邢台",
+        "children": null
+      },
+      {
+        "id": 50,
+        "code": "LAF",
+        "name": "廊坊",
+        "children": null
+      },
+      {
+        "id": 51,
+        "code": "QHD",
+        "name": "秦皇岛",
+        "children": null
+      },
+      {
+        "id": 52,
+        "code": "SJW",
+        "name": "石家庄",
+        "children": null
+      },
+      {
+        "id": 353,
+        "code": "ZJK",
+        "name": "张家口",
+        "children": null
+      },
+      {
+        "id": 445,
+        "code": "QIA",
+        "name": "迁安",
+        "children": null
+      },
+      {
+        "id": 477,
+        "code": "CZ",
+        "name": "沧州",
+        "children": null
+      },
+      {
+        "id": 552,
+        "code": "THAI",
+        "name": "唐海",
+        "children": null
+      },
+      {
+        "id": 567,
+        "code": "ZZS",
+        "name": "涿州市",
+        "children": null
+      },
+      {
+        "id": 568,
+        "code": "KCX",
+        "name": "宽城县",
+        "children": null
+      },
+      {
+        "id": 569,
+        "code": "XNX",
+        "name": "萧宁县",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "code": "HEN",
+    "name": "河南",
+    "children": [
+      {
+        "id": 26,
+        "code": "CGO",
+        "name": "郑州",
+        "children": null
+      },
+      {
+        "id": 27,
+        "code": "XIX",
+        "name": "新乡",
+        "children": null
+      },
+      {
+        "id": 28,
+        "code": "PUY",
+        "name": "濮阳",
+        "children": null
+      },
+      {
+        "id": 29,
+        "code": "LUH",
+        "name": "漯河",
+        "children": null
+      },
+      {
+        "id": 30,
+        "code": "ANY",
+        "name": "安阳",
+        "children": null
+      },
+      {
+        "id": 31,
+        "code": "SMX",
+        "name": "三门峡",
+        "children": null
+      },
+      {
+        "id": 32,
+        "code": "XUC",
+        "name": "许昌",
+        "children": null
+      },
+      {
+        "id": 33,
+        "code": "JIZ",
+        "name": "焦作",
+        "children": null
+      },
+      {
+        "id": 34,
+        "code": "HEB",
+        "name": "鹤壁",
+        "children": null
+      },
+      {
+        "id": 35,
+        "code": "DFE",
+        "name": "登封",
+        "children": null
+      },
+      {
+        "id": 36,
+        "code": "KFG",
+        "name": "开封",
+        "children": null
+      },
+      {
+        "id": 37,
+        "code": "LYA",
+        "name": "洛阳",
+        "children": null
+      },
+      {
+        "id": 350,
+        "code": "NAY",
+        "name": "南阳",
+        "children": null
+      },
+      {
+        "id": 399,
+        "code": "JYU",
+        "name": "济源",
+        "children": null
+      },
+      {
+        "id": 434,
+        "code": "XIM",
+        "name": "新密",
+        "children": null
+      },
+      {
+        "id": 491,
+        "code": "SQ",
+        "name": "商丘",
+        "children": null
+      },
+      {
+        "id": 492,
+        "code": "XY",
+        "name": "信阳",
+        "children": null
+      },
+      {
+        "id": 493,
+        "code": "ZK",
+        "name": "周口",
+        "children": null
+      },
+      {
+        "id": 494,
+        "code": "ZMD",
+        "name": "驻马店",
+        "children": null
+      },
+      {
+        "id": 543,
+        "code": "XYN",
+        "name": "荥阳",
+        "children": null
+      },
+      {
+        "id": 581,
+        "code": "PDS",
+        "name": "平顶山",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "code": "HLJ",
+    "name": "黑龙江",
+    "children": [
+      {
+        "id": 18,
+        "code": "MDJ",
+        "name": "牡丹江",
+        "children": null
+      },
+      {
+        "id": 19,
+        "code": "DQG",
+        "name": "大庆",
+        "children": null
+      },
+      {
+        "id": 20,
+        "code": "SFH",
+        "name": "绥芬河",
+        "children": null
+      },
+      {
+        "id": 21,
+        "code": "YBL",
+        "name": "亚布力",
+        "children": null
+      },
+      {
+        "id": 22,
+        "code": "HEG",
+        "name": "鹤岗",
+        "children": null
+      },
+      {
+        "id": 23,
+        "code": "JMS",
+        "name": "佳木斯",
+        "children": null
+      },
+      {
+        "id": 24,
+        "code": "HEH",
+        "name": "黑河",
+        "children": null
+      },
+      {
+        "id": 25,
+        "code": "HRB",
+        "name": "哈尔滨",
+        "children": null
+      },
+      {
+        "id": 351,
+        "code": "QQHE",
+        "name": "齐齐哈尔",
+        "children": null
+      },
+      {
+        "id": 352,
+        "code": "SUH",
+        "name": "绥化",
+        "children": null
+      },
+      {
+        "id": 427,
+        "code": "LDS",
+        "name": "伊春",
+        "children": null
+      },
+      {
+        "id": 470,
+        "code": "OHE",
+        "name": "漠河",
+        "children": null
+      },
+      {
+        "id": 482,
+        "code": "JX",
+        "name": "鸡西",
+        "children": null
+      },
+      {
+        "id": 483,
+        "code": "SYS",
+        "name": "双鸭山",
+        "children": null
+      },
+      {
+        "id": 484,
+        "code": "QTH",
+        "name": "七台河",
+        "children": null
+      },
+      {
+        "id": 548,
+        "code": "DXAL",
+        "name": "大兴安岭",
+        "children": null
+      },
+      {
+        "id": 551,
+        "code": "HLS",
+        "name": "海林",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "code": "HNN",
+    "name": "湖南",
+    "children": [
+      {
+        "id": 2,
+        "code": "FHX",
+        "name": "凤凰县",
+        "children": null
+      },
+      {
+        "id": 4,
+        "code": "ZZU",
+        "name": "株洲",
+        "children": null
+      },
+      {
+        "id": 5,
+        "code": "CHZ",
+        "name": "郴州",
+        "children": null
+      },
+      {
+        "id": 6,
+        "code": "HGY",
+        "name": "衡阳",
+        "children": null
+      },
+      {
+        "id": 7,
+        "code": "CSX",
+        "name": "长沙",
+        "children": null
+      },
+      {
+        "id": 8,
+        "code": "SHS",
+        "name": "韶山",
+        "children": null
+      },
+      {
+        "id": 9,
+        "code": "YIY",
+        "name": "益阳",
+        "children": null
+      },
+      {
+        "id": 10,
+        "code": "LOD",
+        "name": "娄底",
+        "children": null
+      },
+      {
+        "id": 11,
+        "code": "SYA",
+        "name": "邵阳",
+        "children": null
+      },
+      {
+        "id": 12,
+        "code": "XXI",
+        "name": "湘西",
+        "children": null
+      },
+      {
+        "id": 13,
+        "code": "HHU",
+        "name": "怀化",
+        "children": null
+      },
+      {
+        "id": 14,
+        "code": "YZH",
+        "name": "永州",
+        "children": null
+      },
+      {
+        "id": 15,
+        "code": "CHD",
+        "name": "常德",
+        "children": null
+      },
+      {
+        "id": 16,
+        "code": "XIT",
+        "name": "湘潭",
+        "children": null
+      },
+      {
+        "id": 17,
+        "code": "ZJJ",
+        "name": "张家界",
+        "children": null
+      },
+      {
+        "id": 363,
+        "code": "YYA",
+        "name": "岳阳",
+        "children": null
+      },
+      {
+        "id": 374,
+        "code": "JSH",
+        "name": "吉首",
+        "children": null
+      },
+      {
+        "id": 456,
+        "code": "HJJ",
+        "name": "芷江",
+        "children": null
+      },
+      {
+        "id": 560,
+        "code": "ZIXG",
+        "name": "资兴",
+        "children": null
+      },
+      {
+        "id": 561,
+        "code": "XIAX",
+        "name": "湘乡",
+        "children": null
+      },
+      {
+        "id": 562,
+        "code": "LIUY",
+        "name": "浏阳",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "code": "JLN",
+    "name": "吉林",
+    "children": [
+      {
+        "id": 1,
+        "code": "LIY",
+        "name": "辽源",
+        "children": null
+      },
+      {
+        "id": 3,
+        "code": "CGQ",
+        "name": "长春",
+        "children": null
+      },
+      {
+        "id": 296,
+        "code": "ANT",
+        "name": "安图",
+        "children": null
+      },
+      {
+        "id": 297,
+        "code": "WQX",
+        "name": "汪清县",
+        "children": null
+      },
+      {
+        "id": 298,
+        "code": "SIP",
+        "name": "四平",
+        "children": null
+      },
+      {
+        "id": 299,
+        "code": "YAJ",
+        "name": "延吉",
+        "children": null
+      },
+      {
+        "id": 371,
+        "code": "JIL",
+        "name": "吉林",
+        "children": null
+      },
+      {
+        "id": 372,
+        "code": "TNH",
+        "name": "通化",
+        "children": null
+      },
+      {
+        "id": 480,
+        "code": "SY",
+        "name": "松原",
+        "children": null
+      },
+      {
+        "id": 481,
+        "code": "YB",
+        "name": "延边朝鲜族自治州",
+        "children": null
+      },
+      {
+        "id": 549,
+        "code": "BS",
+        "name": "白山",
+        "children": null
+      },
+      {
+        "id": 579,
+        "code": "BC",
+        "name": "白城",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "code": "JSU",
+    "name": "江苏",
+    "children": [
+      {
+        "id": 273,
+        "code": "WXI",
+        "name": "无锡",
+        "children": null
+      },
+      {
+        "id": 274,
+        "code": "TCG",
+        "name": "太仓",
+        "children": null
+      },
+      {
+        "id": 275,
+        "code": "CZX",
+        "name": "常州",
+        "children": null
+      },
+      {
+        "id": 276,
+        "code": "NTG",
+        "name": "南通",
+        "children": null
+      },
+      {
+        "id": 277,
+        "code": "NKG",
+        "name": "南京",
+        "children": null
+      },
+      {
+        "id": 278,
+        "code": "TOL",
+        "name": "同里",
+        "children": null
+      },
+      {
+        "id": 279,
+        "code": "XZU",
+        "name": "徐州",
+        "children": null
+      },
+      {
+        "id": 280,
+        "code": "JTA",
+        "name": "金坛",
+        "children": null
+      },
+      {
+        "id": 281,
+        "code": "HNB",
+        "name": "淮安",
+        "children": null
+      },
+      {
+        "id": 282,
+        "code": "WUJ",
+        "name": "吴江",
+        "children": null
+      },
+      {
+        "id": 283,
+        "code": "JYN",
+        "name": "江阴",
+        "children": null
+      },
+      {
+        "id": 284,
+        "code": "CHS",
+        "name": "常熟",
+        "children": null
+      },
+      {
+        "id": 285,
+        "code": "LYO",
+        "name": "溧阳",
+        "children": null
+      },
+      {
+        "id": 286,
+        "code": "YIX",
+        "name": "宜兴",
+        "children": null
+      },
+      {
+        "id": 287,
+        "code": "YAC",
+        "name": "盐城",
+        "children": null
+      },
+      {
+        "id": 288,
+        "code": "YIZ",
+        "name": "仪征",
+        "children": null
+      },
+      {
+        "id": 289,
+        "code": "ZHZ",
+        "name": "周庄",
+        "children": null
+      },
+      {
+        "id": 290,
+        "code": "TIZ",
+        "name": "泰州",
+        "children": null
+      },
+      {
+        "id": 291,
+        "code": "KUS",
+        "name": "昆山",
+        "children": null
+      },
+      {
+        "id": 292,
+        "code": "TIX",
+        "name": "泰兴",
+        "children": null
+      },
+      {
+        "id": 293,
+        "code": "SOZ",
+        "name": "苏州",
+        "children": null
+      },
+      {
+        "id": 294,
+        "code": "LYG",
+        "name": "连云港",
+        "children": null
+      },
+      {
+        "id": 295,
+        "code": "ZJI",
+        "name": "镇江",
+        "children": null
+      },
+      {
+        "id": 355,
+        "code": "JID",
+        "name": "江都",
+        "children": null
+      },
+      {
+        "id": 357,
+        "code": "QID",
+        "name": "启东",
+        "children": null
+      },
+      {
+        "id": 358,
+        "code": "TOZ",
+        "name": "通州",
+        "children": null
+      },
+      {
+        "id": 360,
+        "code": "YGH",
+        "name": "扬州",
+        "children": null
+      },
+      {
+        "id": 361,
+        "code": "ZJG",
+        "name": "张家港",
+        "children": null
+      },
+      {
+        "id": 362,
+        "code": "SUQ",
+        "name": "宿迁",
+        "children": null
+      },
+      {
+        "id": 429,
+        "code": "RGS",
+        "name": "如皋市",
+        "children": null
+      },
+      {
+        "id": 453,
+        "code": "JSBOYIC",
+        "name": "宝应",
+        "children": null
+      },
+      {
+        "id": 454,
+        "code": "JSGOYC",
+        "name": "高邮",
+        "children": null
+      },
+      {
+        "id": 455,
+        "code": "JSJYAC",
+        "name": "姜堰",
+        "children": null
+      },
+      {
+        "id": 457,
+        "code": "JINJ",
+        "name": "靖江",
+        "children": null
+      },
+      {
+        "id": 458,
+        "code": "PZHO",
+        "name": "邳州",
+        "children": null
+      },
+      {
+        "id": 462,
+        "code": "DAY",
+        "name": "丹阳",
+        "children": null
+      },
+      {
+        "id": 463,
+        "code": "HIA",
+        "name": "海安",
+        "children": null
+      },
+      {
+        "id": 464,
+        "code": "JUR",
+        "name": "句容",
+        "children": null
+      },
+      {
+        "id": 465,
+        "code": "SIY",
+        "name": "泗阳",
+        "children": null
+      },
+      {
+        "id": 466,
+        "code": "XIQ",
+        "name": "新沂",
+        "children": null
+      },
+      {
+        "id": 467,
+        "code": "YAZ",
+        "name": "扬中",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "code": "JXI",
+    "name": "江西",
+    "children": [
+      {
+        "id": 261,
+        "code": "SHN",
+        "name": "上饶",
+        "children": null
+      },
+      {
+        "id": 262,
+        "code": "JIA",
+        "name": "吉安",
+        "children": null
+      },
+      {
+        "id": 263,
+        "code": "YIC",
+        "name": "宜春",
+        "children": null
+      },
+      {
+        "id": 264,
+        "code": "JGS",
+        "name": "井冈山",
+        "children": null
+      },
+      {
+        "id": 265,
+        "code": "PIX",
+        "name": "萍乡",
+        "children": null
+      },
+      {
+        "id": 266,
+        "code": "FUZ",
+        "name": "抚州",
+        "children": null
+      },
+      {
+        "id": 267,
+        "code": "YIT",
+        "name": "鹰潭",
+        "children": null
+      },
+      {
+        "id": 268,
+        "code": "XIY",
+        "name": "新余",
+        "children": null
+      },
+      {
+        "id": 269,
+        "code": "GZU",
+        "name": "赣州",
+        "children": null
+      },
+      {
+        "id": 270,
+        "code": "JJG",
+        "name": "九江",
+        "children": null
+      },
+      {
+        "id": 271,
+        "code": "JDZ",
+        "name": "景德镇",
+        "children": null
+      },
+      {
+        "id": 272,
+        "code": "KHN",
+        "name": "南昌",
+        "children": null
+      },
+      {
+        "id": 356,
+        "code": "LUS",
+        "name": "庐山",
+        "children": null
+      },
+      {
+        "id": 405,
+        "code": "WIY",
+        "name": "婺源",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "code": "LNG",
+    "name": "辽宁",
+    "children": [
+      {
+        "id": 247,
+        "code": "ASN",
+        "name": "鞍山",
+        "children": null
+      },
+      {
+        "id": 248,
+        "code": "HCG",
+        "name": "海城",
+        "children": null
+      },
+      {
+        "id": 249,
+        "code": "JZU",
+        "name": "锦州",
+        "children": null
+      },
+      {
+        "id": 250,
+        "code": "YKU",
+        "name": "营口",
+        "children": null
+      },
+      {
+        "id": 251,
+        "code": "BEX",
+        "name": "本溪",
+        "children": null
+      },
+      {
+        "id": 252,
+        "code": "LIZ",
+        "name": "辽阳",
+        "children": null
+      },
+      {
+        "id": 253,
+        "code": "DDG",
+        "name": "丹东",
+        "children": null
+      },
+      {
+        "id": 254,
+        "code": "FSN",
+        "name": "抚顺",
+        "children": null
+      },
+      {
+        "id": 255,
+        "code": "DLC",
+        "name": "大连",
+        "children": null
+      },
+      {
+        "id": 256,
+        "code": "PJN",
+        "name": "盘锦",
+        "children": null
+      },
+      {
+        "id": 257,
+        "code": "BXN",
+        "name": "阜新",
+        "children": null
+      },
+      {
+        "id": 258,
+        "code": "SHE",
+        "name": "沈阳",
+        "children": null
+      },
+      {
+        "id": 259,
+        "code": "HLD",
+        "name": "葫芦岛",
+        "children": null
+      },
+      {
+        "id": 260,
+        "code": "TLG",
+        "name": "铁岭",
+        "children": null
+      },
+      {
+        "id": 373,
+        "code": "CHG",
+        "name": "朝阳",
+        "children": null
+      },
+      {
+        "id": 437,
+        "code": "XICH",
+        "name": "兴城",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "code": "NMG",
+    "name": "内蒙古",
+    "children": [
+      {
+        "id": 240,
+        "code": "BTO",
+        "name": "包头",
+        "children": null
+      },
+      {
+        "id": 241,
+        "code": "CFE",
+        "name": "赤峰",
+        "children": null
+      },
+      {
+        "id": 242,
+        "code": "HLE",
+        "name": "海拉尔",
+        "children": null
+      },
+      {
+        "id": 243,
+        "code": "MZL",
+        "name": "满洲里",
+        "children": null
+      },
+      {
+        "id": 244,
+        "code": "HLB",
+        "name": "呼伦贝尔",
+        "children": null
+      },
+      {
+        "id": 245,
+        "code": "EDS",
+        "name": "鄂尔多斯",
+        "children": null
+      },
+      {
+        "id": 246,
+        "code": "HHHT",
+        "name": "呼和浩特",
+        "children": null
+      },
+      {
+        "id": 375,
+        "code": "TGO",
+        "name": "通辽",
+        "children": null
+      },
+      {
+        "id": 376,
+        "code": "WUA",
+        "name": "乌海",
+        "children": null
+      },
+      {
+        "id": 377,
+        "code": "HLH",
+        "name": "乌兰浩特",
+        "children": null
+      },
+      {
+        "id": 378,
+        "code": "XIL",
+        "name": "锡林浩特",
+        "children": null
+      },
+      {
+        "id": 394,
+        "code": "WLCB",
+        "name": "乌兰察布市",
+        "children": null
+      },
+      {
+        "id": 533,
+        "code": "XAM",
+        "name": "兴安盟",
+        "children": null
+      },
+      {
+        "id": 534,
+        "code": "XLGLM",
+        "name": "锡林郭勒盟",
+        "children": null
+      },
+      {
+        "id": 535,
+        "code": "ALSM",
+        "name": "阿拉善盟",
+        "children": null
+      },
+      {
+        "id": 553,
+        "code": "ELHT",
+        "name": "二连浩特",
+        "children": null
+      },
+      {
+        "id": 565,
+        "code": "YIE",
+        "name": "阿尔山",
+        "children": null
+      },
+      {
+        "id": 571,
+        "code": "JGDQ",
+        "name": "加格达奇",
+        "children": null
+      },
+      {
+        "id": 583,
+        "code": "BYZR",
+        "name": "巴彦淖尔",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "code": "NXA",
+    "name": "宁夏",
+    "children": [
+      {
+        "id": 239,
+        "code": "YCN",
+        "name": "银川",
+        "children": null
+      },
+      {
+        "id": 469,
+        "code": "ZHW",
+        "name": "中卫",
+        "children": null
+      },
+      {
+        "id": 538,
+        "code": "SZS",
+        "name": "石嘴山",
+        "children": null
+      },
+      {
+        "id": 539,
+        "code": "WZNX",
+        "name": "吴忠",
+        "children": null
+      },
+      {
+        "id": 540,
+        "code": "GY",
+        "name": "固原",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "code": "YNN",
+    "name": "云南",
+    "children": [
+      {
+        "id": 157,
+        "code": "LJG",
+        "name": "丽江",
+        "children": null
+      },
+      {
+        "id": 158,
+        "code": "QUJ",
+        "name": "曲靖",
+        "children": null
+      },
+      {
+        "id": 159,
+        "code": "YUX",
+        "name": "玉溪",
+        "children": null
+      },
+      {
+        "id": 160,
+        "code": "KYN",
+        "name": "开元",
+        "children": null
+      },
+      {
+        "id": 161,
+        "code": "CUX",
+        "name": "楚雄",
+        "children": null
+      },
+      {
+        "id": 162,
+        "code": "DQ",
+        "name": "迪庆",
+        "children": null
+      },
+      {
+        "id": 163,
+        "code": "TEC",
+        "name": "腾冲",
+        "children": null
+      },
+      {
+        "id": 164,
+        "code": "XGLL",
+        "name": "香格里拉",
+        "children": null
+      },
+      {
+        "id": 165,
+        "code": "ZHD",
+        "name": "中甸",
+        "children": null
+      },
+      {
+        "id": 166,
+        "code": "DLI",
+        "name": "大理",
+        "children": null
+      },
+      {
+        "id": 167,
+        "code": "XSBN",
+        "name": "西双版纳",
+        "children": null
+      },
+      {
+        "id": 168,
+        "code": "KMG",
+        "name": "昆明",
+        "children": null
+      },
+      {
+        "id": 393,
+        "code": "BSD",
+        "name": "保山",
+        "children": null
+      },
+      {
+        "id": 395,
+        "code": "LUM",
+        "name": "芒市",
+        "children": null
+      },
+      {
+        "id": 396,
+        "code": "SYM",
+        "name": "思茅",
+        "children": null
+      },
+      {
+        "id": 397,
+        "code": "ZAT",
+        "name": "昭通",
+        "children": null
+      },
+      {
+        "id": 402,
+        "code": "LNJ",
+        "name": "临沧",
+        "children": null
+      },
+      {
+        "id": 422,
+        "code": "WNH",
+        "name": "文山壮族苗族自治州",
+        "children": null
+      },
+      {
+        "id": 449,
+        "code": "PUER",
+        "name": "普洱",
+        "children": null
+      },
+      {
+        "id": 509,
+        "code": "HH",
+        "name": "红河哈尼族彝族自治州",
+        "children": null
+      },
+      {
+        "id": 510,
+        "code": "DH",
+        "name": "德宏傣族景颇族自治州",
+        "children": null
+      },
+      {
+        "id": 511,
+        "code": "NJ",
+        "name": "怒江傈僳族自治州",
+        "children": null
+      },
+      {
+        "id": 574,
+        "code": "LUX",
+        "name": "泸西",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "code": "ZJG",
+    "name": "浙江",
+    "children": [
+      {
+        "id": 111,
+        "code": "NGB",
+        "name": "宁波",
+        "children": null
+      },
+      {
+        "id": 112,
+        "code": "WNZ",
+        "name": "温州",
+        "children": null
+      },
+      {
+        "id": 113,
+        "code": "PTS",
+        "name": "舟山(普陀山)",
+        "children": null
+      },
+      {
+        "id": 114,
+        "code": "SXG",
+        "name": "绍兴",
+        "children": null
+      },
+      {
+        "id": 115,
+        "code": "FEH",
+        "name": "奉化",
+        "children": null
+      },
+      {
+        "id": 116,
+        "code": "JDE",
+        "name": "建德",
+        "children": null
+      },
+      {
+        "id": 117,
+        "code": "QDH",
+        "name": "千岛湖",
+        "children": null
+      },
+      {
+        "id": 118,
+        "code": "LOY",
+        "name": "龙游",
+        "children": null
+      },
+      {
+        "id": 119,
+        "code": "NHI",
+        "name": "宁海",
+        "children": null
+      },
+      {
+        "id": 120,
+        "code": "PIH",
+        "name": "平湖",
+        "children": null
+      },
+      {
+        "id": 121,
+        "code": "SHY",
+        "name": "上虞",
+        "children": null
+      },
+      {
+        "id": 122,
+        "code": "SHZ",
+        "name": "嵊州",
+        "children": null
+      },
+      {
+        "id": 123,
+        "code": "TIS",
+        "name": "泰顺",
+        "children": null
+      },
+      {
+        "id": 124,
+        "code": "TIT",
+        "name": "天台",
+        "children": null
+      },
+      {
+        "id": 125,
+        "code": "LXS",
+        "name": "兰溪",
+        "children": null
+      },
+      {
+        "id": 126,
+        "code": "TOX",
+        "name": "桐乡",
+        "children": null
+      },
+      {
+        "id": 127,
+        "code": "WUY",
+        "name": "武义",
+        "children": null
+      },
+      {
+        "id": 128,
+        "code": "XIS",
+        "name": "象山",
+        "children": null
+      },
+      {
+        "id": 129,
+        "code": "XCH",
+        "name": "新昌",
+        "children": null
+      },
+      {
+        "id": 130,
+        "code": "YDS",
+        "name": "雁荡山",
+        "children": null
+      },
+      {
+        "id": 131,
+        "code": "YOJ",
+        "name": "永嘉",
+        "children": null
+      },
+      {
+        "id": 132,
+        "code": "HIN",
+        "name": "海宁",
+        "children": null
+      },
+      {
+        "id": 133,
+        "code": "HIY",
+        "name": "海盐",
+        "children": null
+      },
+      {
+        "id": 134,
+        "code": "LEQ",
+        "name": "乐清",
+        "children": null
+      },
+      {
+        "id": 135,
+        "code": "JUY",
+        "name": "缙云",
+        "children": null
+      },
+      {
+        "id": 136,
+        "code": "QUZ",
+        "name": "衢州",
+        "children": null
+      },
+      {
+        "id": 137,
+        "code": "LIA",
+        "name": "临安",
+        "children": null
+      },
+      {
+        "id": 138,
+        "code": "JIX",
+        "name": "嘉兴",
+        "children": null
+      },
+      {
+        "id": 139,
+        "code": "RUA",
+        "name": "瑞安",
+        "children": null
+      },
+      {
+        "id": 140,
+        "code": "JIH",
+        "name": "金华",
+        "children": null
+      },
+      {
+        "id": 141,
+        "code": "ZUJ",
+        "name": "诸暨",
+        "children": null
+      },
+      {
+        "id": 142,
+        "code": "YKN",
+        "name": "永康",
+        "children": null
+      },
+      {
+        "id": 143,
+        "code": "ANJ",
+        "name": "安吉",
+        "children": null
+      },
+      {
+        "id": 144,
+        "code": "DEQ",
+        "name": "德清",
+        "children": null
+      },
+      {
+        "id": 145,
+        "code": "WEL",
+        "name": "温岭",
+        "children": null
+      },
+      {
+        "id": 146,
+        "code": "JIS",
+        "name": "嘉善",
+        "children": null
+      },
+      {
+        "id": 147,
+        "code": "HUZ",
+        "name": "湖州",
+        "children": null
+      },
+      {
+        "id": 148,
+        "code": "TZH",
+        "name": "台州",
+        "children": null
+      },
+      {
+        "id": 149,
+        "code": "FUY",
+        "name": "富阳",
+        "children": null
+      },
+      {
+        "id": 150,
+        "code": "CIX",
+        "name": "慈溪",
+        "children": null
+      },
+      {
+        "id": 151,
+        "code": "TOU",
+        "name": "桐庐",
+        "children": null
+      },
+      {
+        "id": 152,
+        "code": "YIW",
+        "name": "义乌",
+        "children": null
+      },
+      {
+        "id": 153,
+        "code": "HGH",
+        "name": "杭州",
+        "children": null
+      },
+      {
+        "id": 154,
+        "code": "YUY",
+        "name": "余姚",
+        "children": null
+      },
+      {
+        "id": 398,
+        "code": "HYN",
+        "name": "黄岩",
+        "children": null
+      },
+      {
+        "id": 438,
+        "code": "PUJ",
+        "name": "浦江",
+        "children": null
+      },
+      {
+        "id": 444,
+        "code": "LIHA",
+        "name": "临海",
+        "children": null
+      },
+      {
+        "id": 446,
+        "code": "LISH",
+        "name": "丽水",
+        "children": null
+      },
+      {
+        "id": 460,
+        "code": "HED",
+        "name": "横店",
+        "children": null
+      },
+      {
+        "id": 461,
+        "code": "XIJ",
+        "name": "仙居",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "code": "SHA",
+    "name": "上海",
+    "children": [
+      {
+        "id": 156,
+        "code": "SHA",
+        "name": "上海",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "code": "MAC",
+    "name": "中国澳门",
+    "children": [
+      {
+        "id": 366,
+        "code": "MAC",
+        "name": "澳门",
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "code": "HKG",
+    "name": "中国香港",
+    "children": [
+      {
+        "id": 413,
+        "code": "HKG",
+        "name": "香港",
+        "children": null
+      }
+    ]
+  }
+]
