@@ -40,7 +40,7 @@
       </el-table-column>
       <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">
         <template slot-scope="scope">
-          <el-button type="success" size="small"  @click="handleUpdate(scope.row)">Detail</el-button>
+          <el-button type="success" size="small"  @click="handleDetail(scope.row)">Detail</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -51,26 +51,56 @@
     </div>
 
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
-      <el-form :rules="rules" ref="dataForm" :model="temp" label-position="left" label-width="100px" style='width: 400px; margin-left:50px;'>
-          <el-form-item label="ID" prop="id">
-          <el-input v-model="temp.id"></el-input>
-        </el-form-item>
+    <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
+    <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
+              style="width: 100%;font-size:13px;">
+      <el-table-column width="100px" align="center" label="yBegin">
+        <template slot-scope="scope">
+          <span>{{scope.row.yBegin}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column width="100px" align="center" label="xBegin">
+        <template slot-scope="scope">
+          <span>{{scope.row.xBegin}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column width="100px" align="center" label="xEnd">
+        <template slot-scope="scope">
+          <span>{{scope.row.xEnd}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column  align="center" label="text">
+        <template slot-scope="scope">
+          <span>{{scope.row.text}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column  align="center" label="isKey">
+        <template slot-scope="scope">
+          <span>{{scope.row.isKey}}</span>
+        </template>
+      </el-table-column>
+      <!--        <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">-->
+      <!--          <template slot-scope="scope">-->
+      <!--            <el-button type="success" size="small"  @click="handleDetail(scope.row)">Detail</el-button>-->
+      <!--          </template>-->
+      <!--        </el-table-column>-->
+    </el-table>
 
-        <el-form-item label="Name" prop="Name">
-          <el-input v-model="temp.name"></el-input>
-        </el-form-item>
+    <!--      <div slot="footer" class="dialog-footer">-->
+    <!--&lt;!&ndash;        <el-button @click="dialogFormVisible = false">取消</el-button>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData">提交</el-button>&ndash;&gt;-->
+    <!--        <el-button type="primary" @click="updateData">detail</el-button>-->
+    <!--      </div>-->
+  </el-dialog>
 
-        <el-form-item label="Path" prop="Path">
-          <el-input v-model="temp.path"></el-input>
-        </el-form-item>
+    <el-dialog title="Json" :visible.sync="jsonFormVisible">
+      <el-input
+        type="textarea"
+        autosize
+        placeholder="Json"
+        v-model="pdfJson">
+      </el-input>
 
-      </el-form>
-
-      <div slot="footer" class="dialog-footer">
-<!--        <el-button @click="dialogFormVisible = false">取消</el-button>-->
-<!--        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData">提交</el-button>-->
-        <el-button type="primary" @click="updateData">detail</el-button>
-      </div>
     </el-dialog>
 
     <el-dialog :title="'版本号【'+temp.name+'】安装包上传'" :visible.sync="dialogUploadVisible">
@@ -102,6 +132,8 @@
         downloadapp,
         uploadFile,
         delObj} from '@/api/pdf/pdfPage'
+    import {
+        getPdfLinedataByPdfId} from '@/api/pdf/pdfLinedata'
     import waves from '@/directive/waves' // 水波纹指令
     import { parseTime } from '@/utils'
 
@@ -132,6 +164,8 @@
         },
         data() {
             return {
+                pdfJson:'',
+                lindataList:[],
                 tableKey: 0,
                 list: null,
                 total: null,
@@ -145,6 +179,7 @@
                     needUpdate: undefined
                 },
                 dialogFormVisible: false,
+                jsonFormVisible:false,
                 dialogUploadVisible:false,
                 dialogStatus: '',
                 textMap: {
@@ -270,13 +305,36 @@
                     this.$refs['dataForm'].clearValidate()
                 })
             },
-            handleUpdate(row) {
-                this.temp = Object.assign({}, row) // copy obj
+            handleDetail(row) {
                 this.dialogStatus = 'update'
                 this.dialogFormVisible = true
                 this.$nextTick(() => {
                     this.$refs['dataForm'].clearValidate()
                 })
+                getPdfLinedataByPdfId({id:row.id}).then(response => {
+                    this.lindataList = response
+                })
+            },
+            HandleToJsonButton(){
+                this.jsonFormVisible = true;
+                let json = '{\n';
+                const datalist = this.lindataList;
+                for(let i=0;i<datalist.length;i++){
+                    if(datalist[i].isKey===1){
+                        //上一个也是key
+                        if(i>0&&datalist[i-1].isKey===1&&datalist[i].isKey===1){
+                            json += ' : "",\n'
+                        }
+                        json += '  "' + datalist[i].text +'"';
+                    }else{
+                        json += ' : "' + datalist[i].text +'",\n';
+                    }
+                }
+                if(datalist[datalist.length-1].isKey===1&&datalist[datalist.length-2].isKey){
+                    json += ' : "",'
+                }
+                json += '\n}';
+                this.pdfJson = json;
             },
             handleDelete(row) {
                 this.$confirm('此操作将永久删除这条记录, 是否继续?', '提示', {
