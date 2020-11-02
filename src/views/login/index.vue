@@ -1,7 +1,7 @@
 <template>
 <div class="login-container">
   <el-form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left" label-width="0px" class="card-box login-form">
-    <h3 class="title">eWheel后台管理系统登录</h3>
+    <h3 class="title">PDF</h3>
     <el-form-item prop="username">
       <span class="svg-container"><icon-svg icon-class="jiedianyoujian"></icon-svg></span>
       <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="账户"></el-input>

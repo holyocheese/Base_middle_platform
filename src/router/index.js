@@ -104,4 +104,19 @@ export const asyncRouterMap = [
   }
   ]
 },
+  {
+    path: '/pdf',
+    component: Layout,
+    name: 'pdf',
+    icon: 'setting',
+    authority: 'pdf',
+    children: [{
+      path: 'pdfPage',
+      icon: 'fa-user',
+      component: _import('pdf/pdfPage'),
+      name: 'pdfPage',
+      authority: 'pdfPage'
+    },
+    ]
+  }
 ];
