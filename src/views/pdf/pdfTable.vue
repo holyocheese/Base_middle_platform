@@ -77,12 +77,14 @@
         </el-table-column>
         <el-table-column  align="center" label="isKey">
           <template slot-scope="scope">
-            <span>{{scope.row.isKey}}</span>
+            <el-checkbox @change="checkBoxChange(scope.row)" :checked="scope.row.isKey===1?true:false"></el-checkbox>
+            <!--<span>{{scope.row.isKey}}</span>-->
           </template>
         </el-table-column>
         <el-table-column  align="center" label="table_data_type">
           <template slot-scope="scope">
             <!--<el-checkbox v-model="scope.row.isKey" :checked="scope.row.isKey===1?true:false"  true-label="1" false-label="0" ></el-checkbox>-->
+            <!--<el-checkbox @change="checkBoxChange(scope.row)" :checked="scope.row.isKey===1?true:false"></el-checkbox>-->
             <span>{{scope.row.tableDataType}}</span>
           </template>
         </el-table-column>
@@ -471,6 +473,12 @@
                         return v[j]
                     }
                 }))
+            },
+            checkBoxChange(row){
+              if(this.lindataList.indexOf(row) > -1){
+                this.lindataList[this.lindataList.indexOf(row)].isKey =
+                  ~this.lindataList[this.lindataList.indexOf(row)].isKey + 2;
+              }
             }
         }
     }
