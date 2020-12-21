@@ -116,6 +116,12 @@ export const asyncRouterMap = [
       component: _import('pdf/pdfPage'),
       name: 'pdfPage',
       authority: 'pdfPage'
+    },{
+      path: 'pdfTable',
+      icon: 'fa-user',
+      component: _import('pdf/pdfTable'),
+      name: 'pdfTable',
+      authority: 'pdfTable'
     },
     ]
   }
