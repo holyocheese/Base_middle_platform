@@ -54,7 +54,7 @@
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
       <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
-                style="width: 100%;font-size:13px;">
+                style="width: 100%;font-size:13px;" :row-class-name="tableRowClassName">
         <el-table-column width="100px" align="center" label="yBegin">
           <template slot-scope="scope">
             <span>{{scope.row.yBegin}}</span>
@@ -80,6 +80,12 @@
             <span>{{scope.row.isKey}}</span>
           </template>
         </el-table-column>
+        <el-table-column  align="center" label="table_data_type">
+          <template slot-scope="scope">
+            <!--<el-checkbox v-model="scope.row.isKey" :checked="scope.row.isKey===1?true:false"  true-label="1" false-label="0" ></el-checkbox>-->
+            <span>{{scope.row.tableDataType}}</span>
+          </template>
+        </el-table-column>
       </el-table>
     </el-dialog>
 
@@ -99,6 +105,16 @@
 
   </div>
 </template>
+
+<style>
+  .el-table .warning-row {
+    background: #F5BCA9;
+  }
+
+  .el-table .success-row {
+    background: #D8CEF6;
+  }
+</style>
 
 <script>
     import {
@@ -202,6 +218,14 @@
             this.getList()
         },
         methods: {
+            tableRowClassName({row, rowIndex}) {
+              if (row.tableDataType === 'top') {
+                return 'warning-row';
+              } else if (row.tableDataType === 'left') {
+                return 'success-row';
+              }
+              return '';
+            },
             getList() {
                 this.listLoading = true
                 page(this.listQuery).then(response => {

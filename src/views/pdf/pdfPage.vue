@@ -41,6 +41,7 @@
       <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button type="success" size="small"  @click="handleDetail(scope.row)">Detail</el-button>
+          <el-button type="primary" size="small"  @click="handlePreview(scope.row)">Prewiew</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -77,7 +78,8 @@
       <el-table-column  align="center" label="isKey">
         <template slot-scope="scope">
           <!--<el-checkbox v-model="scope.row.isKey" :checked="scope.row.isKey===1?true:false"  true-label="1" false-label="0" ></el-checkbox>-->
-          <span>{{scope.row.isKey===1?'true':'false'}}</span>
+          <el-checkbox @change="checkBoxChange(scope.row)" :checked="scope.row.isKey===1?true:false"></el-checkbox>
+          <!--<span>{{scope.row.isKey===1?'true':'false'}}</span>-->
         </template>
       </el-table-column>
       <!--        <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">-->
@@ -121,6 +123,10 @@
         <!--<el-button type="primary" @click="uploadApp">提交</el-button>-->
       </div>
     </el-dialog>
+
+    <el-dialog title="Pdf-preview" :visible.sync="previewFormVisible">
+      <pdf v-bind:src="previewPdfPath"></pdf>
+    </el-dialog>
   </div>
 </template>
 
@@ -137,6 +143,7 @@
         getPdfLinedataByPdfId} from '@/api/pdf/pdfLinedata'
     import waves from '@/directive/waves' // 水波纹指令
     import { parseTime } from '@/utils'
+    import pdf from 'vue-pdf'
 
     const typeOptions = [
         { key: 1, display_name: 'android' },
@@ -160,6 +167,9 @@
 
     export default {
         name: 'pdfPage',
+        components: {
+          pdf
+        },
         directives: {
             waves
         },
@@ -183,6 +193,7 @@
                 dialogFormVisible: false,
                 jsonFormVisible:false,
                 dialogUploadVisible:false,
+                previewFormVisible:false,
                 dialogStatus: '',
                 textMap: {
                     update: '编辑',
@@ -206,6 +217,8 @@
                 },
                 uploadUrl:"",
                 url : process.env.BASE_API+"/appSetting/uploadApp",
+                pdfNumPages:0,
+                previewPdfPath:''
             }
         },
         filters: {
@@ -314,6 +327,13 @@
                 getPdfLinedataByPdfId({id:row.id}).then(response => {
                     this.lindataList = response
                 })
+            },
+            handlePreview(row) {
+              this.previewPdfPath = pdf.createLoadingTask('../../static/pdf/'+row.fileName);
+              this.previewPdfPath.promise.then(pdf => {
+                this.pdfNumPages = pdf.numPages;
+              });
+              this.previewFormVisible = true;
             },
             HandleToJsonButton(){
                 this.jsonFormVisible = true;
@@ -455,6 +475,12 @@
                         return v[j]
                     }
                 }))
+            },
+            checkBoxChange(row){
+              if(this.lindataList.indexOf(row) > -1){
+                this.lindataList[this.lindataList.indexOf(row)].isKey =
+                  ~this.lindataList[this.lindataList.indexOf(row)].isKey + 2;
+              }
             }
         }
     }
