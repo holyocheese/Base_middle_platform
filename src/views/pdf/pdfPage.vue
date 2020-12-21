@@ -41,7 +41,6 @@
       <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button type="success" size="small"  @click="handleDetail(scope.row)">Detail</el-button>
-          <el-button type="primary" size="small"  @click="handlePreview(scope.row)">Prewiew</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -51,39 +50,51 @@
       </el-pagination>
     </div>
 
-    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
-      <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
-      <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
-                style="width: 100%;font-size:13px;">
-        <el-table-column width="100px" align="center" label="yBegin">
-          <template slot-scope="scope">
-            <span>{{scope.row.yBegin}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column width="100px" align="center" label="xBegin">
-          <template slot-scope="scope">
-            <span>{{scope.row.xBegin}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column width="100px" align="center" label="xEnd">
-          <template slot-scope="scope">
-            <span>{{scope.row.xEnd}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column  align="center" label="text">
-          <template slot-scope="scope">
-            <span>{{scope.row.text}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column  align="center" label="isKey">
-          <template slot-scope="scope">
-            <span>{{scope.row.isKey}}</span>
-          </template>
-        </el-table-column>
-      </el-table>
-    </el-dialog>
+    <el-dialog :title="jsonTitle" :visible.sync="dialogFormVisible">
+    <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
+    <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
+              style="width: 100%;font-size:13px;">
+      <el-table-column width="100px" align="center" label="yBegin">
+        <template slot-scope="scope">
+          <span>{{scope.row.yBegin}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column width="100px" align="center" label="xBegin">
+        <template slot-scope="scope">
+          <span>{{scope.row.xBegin}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column width="100px" align="center" label="xEnd">
+        <template slot-scope="scope">
+          <span>{{scope.row.xEnd}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column  align="center" label="text">
+        <template slot-scope="scope">
+          <span>{{scope.row.text}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column  align="center" label="isKey">
+        <template slot-scope="scope">
+          <!--<el-checkbox v-model="scope.row.isKey" :checked="scope.row.isKey===1?true:false"  true-label="1" false-label="0" ></el-checkbox>-->
+          <span>{{scope.row.isKey===1?'true':'false'}}</span>
+        </template>
+      </el-table-column>
+      <!--        <el-table-column align="center" label="Operation" width="270" class-name="small-padding fixed-width">-->
+      <!--          <template slot-scope="scope">-->
+      <!--            <el-button type="success" size="small"  @click="handleDetail(scope.row)">Detail</el-button>-->
+      <!--          </template>-->
+      <!--        </el-table-column>-->
+    </el-table>
 
-    <el-dialog title="Json" :visible.sync="jsonFormVisible">
+    <!--      <div slot="footer" class="dialog-footer">-->
+    <!--&lt;!&ndash;        <el-button @click="dialogFormVisible = false">取消</el-button>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData">提交</el-button>&ndash;&gt;-->
+    <!--        <el-button type="primary" @click="updateData">detail</el-button>-->
+    <!--      </div>-->
+  </el-dialog>
+
+    <el-dialog :title="jsonTitle" :visible.sync="jsonFormVisible">
       <el-input
         type="textarea"
         autosize
@@ -93,10 +104,23 @@
 
     </el-dialog>
 
-    <el-dialog title="Pdf-preview" :visible.sync="previewFormVisible">
-      <pdf v-bind:src="previewPdfPath"></pdf>
-    </el-dialog>
+    <el-dialog :title="'版本号【'+temp.name+'】安装包上传'" :visible.sync="dialogUploadVisible">
+      <el-form :rules="rules" ref="dataForm" :model="temp" label-position="left" label-width="100px" style='width: 400px; margin-left:50px;'>
 
+        <el-upload :limit="1" accept = "apk"  :before-upload="beforeAvatarUpload" ref="upload"
+                   list-type="text" :action="this.uploadUrl" :show-file-list="true" :auto-upload="false"
+                   :on-progress="fileHandleProgress" :on-success="fileHandleSuccsess" :on-error="fileHandleError">
+          <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+          <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+          <div slot="tip" class="el-upload__tip">只能上传apk文件，且不超过100M</div>
+        </el-upload>
+
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogUploadVisible = false">取消</el-button>
+        <!--<el-button type="primary" @click="uploadApp">提交</el-button>-->
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -113,7 +137,6 @@
         getPdfLinedataByPdfId} from '@/api/pdf/pdfLinedata'
     import waves from '@/directive/waves' // 水波纹指令
     import { parseTime } from '@/utils'
-    import pdf from 'vue-pdf'
 
     const typeOptions = [
         { key: 1, display_name: 'android' },
@@ -137,9 +160,6 @@
 
     export default {
         name: 'pdfPage',
-        components: {
-          pdf
-        },
         directives: {
             waves
         },
@@ -147,6 +167,7 @@
             return {
                 pdfJson:'',
                 lindataList:[],
+                jsonTitle:'',
                 tableKey: 0,
                 list: null,
                 total: null,
@@ -161,7 +182,6 @@
                 },
                 dialogFormVisible: false,
                 jsonFormVisible:false,
-                previewFormVisible:false,
                 dialogUploadVisible:false,
                 dialogStatus: '',
                 textMap: {
@@ -186,8 +206,6 @@
                 },
                 uploadUrl:"",
                 url : process.env.BASE_API+"/appSetting/uploadApp",
-                previewPdfPath: "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf",
-                pdfNumPages:1
             }
         },
         filters: {
@@ -292,19 +310,10 @@
             handleDetail(row) {
                 this.dialogStatus = 'update'
                 this.dialogFormVisible = true
-                this.$nextTick(() => {
-                    this.$refs['dataForm'].clearValidate()
-                })
+                this.jsonTitle = row.fileName;
                 getPdfLinedataByPdfId({id:row.id}).then(response => {
                     this.lindataList = response
                 })
-            },
-            handlePreview(row) {
-              this.previewPdfPath = pdf.createLoadingTask('../../static/pdf/'+row.fileName);
-              this.previewPdfPath.promise.then(pdf => {
-                this.pdfNumPages = pdf.numPages;
-              });
-              this.previewFormVisible = true;
             },
             HandleToJsonButton(){
                 this.jsonFormVisible = true;
