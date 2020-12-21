@@ -4,15 +4,15 @@
     <h3 class="title">PDF</h3>
     <el-form-item prop="username">
       <span class="svg-container"><icon-svg icon-class="jiedianyoujian"></icon-svg></span>
-      <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="账户"></el-input>
+      <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="Accout"></el-input>
     </el-form-item>
     <el-form-item prop="password">
       <span class="svg-container"><icon-svg icon-class="mima"></icon-svg></span>
-      <el-input name="password" type="password" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="密码"></el-input>
+      <el-input name="password" type="password" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="Password"></el-input>
     </el-form-item>
     <el-form-item>
       <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">
-        登录
+        Login
       </el-button>
     </el-form-item>
   </el-form>
