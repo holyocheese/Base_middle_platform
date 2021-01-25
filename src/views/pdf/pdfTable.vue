@@ -327,7 +327,9 @@
                 })
             },
             handlePreview(row) {
-              this.previewPdfPath = pdf.createLoadingTask('../../static/pdf/'+row.fileName);
+              let path = '../../static/pdf/'+row.fileName.replaceAll(" ","");
+              console.log(path);
+              this.previewPdfPath = pdf.createLoadingTask(encodeURI(path));
               this.previewPdfPath.promise.then(pdf => {
                 this.pdfNumPages = pdf.numPages;
               });

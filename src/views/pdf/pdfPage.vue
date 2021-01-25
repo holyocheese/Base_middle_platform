@@ -3,15 +3,14 @@
 
     <div class="filter-container">
       <el-input @keyup.enter.native="handleFilter" style="width: 200px;" class="filter-item" placeholder="file name" v-model="listQuery.fileName"></el-input>
-
-<!--      <el-select clearable style="width: 200px" class="filter-item" v-model="listQuery.type" placeholder="系统类型">-->
-<!--        <el-option v-for="item in  typeOptions" :key="item.key" :label="item.display_name" :value="item.key"></el-option>-->
-<!--      </el-select>-->
-
-<!--      <el-select clearable class="filter-item" style="width: 200px" v-model="listQuery.needUpdate" placeholder="是否需要更新">-->
-<!--        <el-option v-for="item in  needUpdateOptions" :key="item.key" :label="item.display_name" :value="item.key"></el-option>-->
-<!--      </el-select>-->
-
+      <el-select v-model="listQuery.setName" placeholder="Please select">
+        <el-option
+          v-for="item in typeOptions"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
       <el-button class="filter-item" type="primary" v-waves icon="el-icon-search" @click="handleFilter">Serach</el-button>
       <el-button class="filter-item" style="margin-left: 10px;" @click="handleCreate" type="primary" icon="el-icon-edit">Add</el-button>
     </div>
@@ -125,7 +124,8 @@
     </el-dialog>
 
     <el-dialog title="Pdf-preview" :visible.sync="previewFormVisible">
-      <pdf v-bind:src="previewPdfPath"></pdf>
+      Page: <el-input @change="handlePdfPage" style="width: 200px;" class="filter-item" placeholder="page" v-model="pdfNumPages" type="number"></el-input>
+      <pdf v-bind:src="previewPdfPath" :page="pdfNumPages"></pdf>
     </el-dialog>
   </div>
 </template>
@@ -145,26 +145,6 @@
     import { parseTime } from '@/utils'
     import pdf from 'vue-pdf'
 
-    const typeOptions = [
-        { key: 1, display_name: 'android' },
-        { key: 2, display_name: 'ios' }
-    ]
-
-    const needUpdateOptions = [
-        { key: 0, display_name: '否' },
-        { key: 1, display_name: '是' }
-    ]
-
-    const typeKeyValue = typeOptions.reduce((acc, cur) => {
-        acc[cur.key] = cur.display_name
-        return acc
-    }, {})
-
-    const needUpdateKeyValue = needUpdateOptions.reduce((acc, cur) => {
-        acc[cur.key] = cur.display_name
-        return acc
-    }, {})
-
     export default {
         name: 'pdfPage',
         components: {
@@ -182,8 +162,6 @@
                 list: null,
                 total: null,
                 listLoading: true,
-                typeOptions,
-                needUpdateOptions,
                 listQuery: {
                     page: 1,
                     limit: 10,
@@ -218,7 +196,17 @@
                 uploadUrl:"",
                 url : process.env.BASE_API+"/appSetting/uploadApp",
                 pdfNumPages:0,
-                previewPdfPath:''
+                previewPdfPath:'',
+                typeOptions: [
+                  {
+                    value:'breath',
+                    label:'breath'
+                  },
+                  {
+                    value:'mri',
+                    label:'mri'
+                  }
+                ]
             }
         },
         filters: {
@@ -324,16 +312,23 @@
                 this.dialogStatus = 'update'
                 this.dialogFormVisible = true
                 this.jsonTitle = row.fileName;
-                getPdfLinedataByPdfId({id:row.id}).then(response => {
+                getPdfLinedataByPdfId({id:row.id,type:row.setName}).then(response => {
                     this.lindataList = response
                 })
             },
             handlePreview(row) {
-              this.previewPdfPath = pdf.createLoadingTask('../../static/pdf/'+row.fileName);
+              let path = '../../static/pdf/'+row.fileName.replaceAll(" ","");
+              console.log(path);
+              this.previewPdfPath = pdf.createLoadingTask(encodeURI(path));
               this.previewPdfPath.promise.then(pdf => {
                 this.pdfNumPages = pdf.numPages;
               });
               this.previewFormVisible = true;
+            },
+            handlePdfPage(page){
+              this.previewPdfPath.promise.then(pdf => {
+                this.pdfNumPages = parseInt(page);
+              });
             },
             HandleToJsonButton(){
                 this.jsonFormVisible = true;
