@@ -49,3 +49,11 @@ export function getPdfLinedataByPdfId(query) {
     params: query
   })
 }
+
+export function getTableJsonById(query) {
+  return fetch({
+    url: '/pdfLinedata/getTableJson',
+    method: 'get',
+    params: query
+  })
+}

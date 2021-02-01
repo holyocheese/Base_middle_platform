@@ -99,8 +99,10 @@
 <!--        placeholder="Json"-->
 <!--        v-model="pdfJson">-->
 <!--      </el-input>-->
-
-      <pre>{{ pdfJson  }}</pre>
+      <json-viewer
+        :value="pdfJson"
+        copyable
+        boxed></json-viewer>
 
     </el-dialog>
 
@@ -126,19 +128,20 @@
         page,
         addObj,
         updateObj,
-        forceUpdate,
-        downloadapp,
         uploadFile,
         delObj} from '@/api/pdf/pdfPage'
     import {
-        getPdfLinedataByPdfId} from '@/api/pdf/pdfLinedata'
+        getPdfLinedataByPdfId,getTableJsonById} from '@/api/pdf/pdfLinedata'
     import { parseTime } from '@/utils'
     import pdf from 'vue-pdf'
+    import JsonViewer from 'vue-json-viewer/ssr'
+    import 'vue-json-viewer/style.css'
 
     export default {
         name: 'pdfPage',
         components: {
-          pdf
+          pdf,
+          JsonViewer
         },
         data() {
             return {
@@ -174,14 +177,7 @@
                     effectiveTime: null,
                     updateMessage:null
                 },
-                rules: {
-                    name: [{ required: true, message: 'app名称不能为空', trigger: 'blur' }],
-                    type: [{ required: true, message: '系统类型不能为空', trigger: 'change' }],
-                    version: [{ required: true, message: '版本号不能为空', trigger: 'blur' }],
-                    updateMessage:[{ required: true, message: '版本说明不能为空', trigger: 'blur' }]
-                },
-                uploadUrl:"",
-                url : process.env.BASE_API+"/appSetting/uploadApp",
+                selectingId:0,
                 previewPdfPath: "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf",
                 pdfNumPages:1,
                 typeOptions: [
@@ -307,6 +303,7 @@
             handleDetail(row) {
                 this.dialogStatus = 'update'
                 this.dialogFormVisible = true
+                this.selectingId = row.id;
                 this.$nextTick(() => {
                     this.$refs['dataForm'].clearValidate()
                 })
@@ -326,24 +323,9 @@
             },
             HandleToJsonButton(){
                 this.jsonFormVisible = true;
-                let json = '{\n';
-                const datalist = this.lindataList;
-                for(let i=0;i<datalist.length;i++){
-                    if(datalist[i].isKey===1){
-                        //上一个也是key
-                        if(i>0&&datalist[i-1].isKey===1&&datalist[i].isKey===1){
-                            json += ' : "",\n'
-                        }
-                        json += '  "' + datalist[i].text +'"';
-                    }else{
-                        json += ' : "' + datalist[i].text +'",\n';
-                    }
-                }
-                if(datalist[datalist.length-1].isKey===1&&datalist[datalist.length-2].isKey){
-                    json += ' : "",'
-                }
-                json += '\n}';
-                this.pdfJson = json;
+                getTableJsonById({id:this.selectingId}).then( msg => {
+                  this.pdfJson = JSON.parse(msg.data);
+                })
             },
             handleDelete(row) {
                 this.$confirm('此操作将永久删除这条记录, 是否继续?', '提示', {
