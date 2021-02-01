@@ -4,13 +4,14 @@
     <div class="filter-container">
       <el-input @keyup.enter.native="handleFilter" style="width: 200px;" class="filter-item" placeholder="file name" v-model="listQuery.fileName"></el-input>
 
-<!--      <el-select clearable style="width: 200px" class="filter-item" v-model="listQuery.type" placeholder="系统类型">-->
-<!--        <el-option v-for="item in  typeOptions" :key="item.key" :label="item.display_name" :value="item.key"></el-option>-->
-<!--      </el-select>-->
-
-<!--      <el-select clearable class="filter-item" style="width: 200px" v-model="listQuery.needUpdate" placeholder="是否需要更新">-->
-<!--        <el-option v-for="item in  needUpdateOptions" :key="item.key" :label="item.display_name" :value="item.key"></el-option>-->
-<!--      </el-select>-->
+      <el-select v-model="listQuery.setName" placeholder="Please select" @change="handleFilter">
+        <el-option
+          v-for="item in typeOptions"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
 
       <el-button class="filter-item" type="primary" v-waves icon="el-icon-search" @click="handleFilter">Serach</el-button>
       <el-button class="filter-item" style="margin-left: 10px;" @click="handleCreate" type="primary" icon="el-icon-edit">Add</el-button>
@@ -92,12 +93,14 @@
     </el-dialog>
 
     <el-dialog title="Json" :visible.sync="jsonFormVisible">
-      <el-input
-        type="textarea"
-        autosize
-        placeholder="Json"
-        v-model="pdfJson">
-      </el-input>
+<!--      <el-input-->
+<!--        type="textarea"-->
+<!--        autosize-->
+<!--        placeholder="Json"-->
+<!--        v-model="pdfJson">-->
+<!--      </el-input>-->
+
+      <pre>{{ pdfJson  }}</pre>
 
     </el-dialog>
 
@@ -129,37 +132,13 @@
         delObj} from '@/api/pdf/pdfPage'
     import {
         getPdfLinedataByPdfId} from '@/api/pdf/pdfLinedata'
-    import waves from '@/directive/waves' // 水波纹指令
     import { parseTime } from '@/utils'
     import pdf from 'vue-pdf'
-
-    const typeOptions = [
-        { key: 1, display_name: 'android' },
-        { key: 2, display_name: 'ios' }
-    ]
-
-    const needUpdateOptions = [
-        { key: 0, display_name: '否' },
-        { key: 1, display_name: '是' }
-    ]
-
-    const typeKeyValue = typeOptions.reduce((acc, cur) => {
-        acc[cur.key] = cur.display_name
-        return acc
-    }, {})
-
-    const needUpdateKeyValue = needUpdateOptions.reduce((acc, cur) => {
-        acc[cur.key] = cur.display_name
-        return acc
-    }, {})
 
     export default {
         name: 'pdfPage',
         components: {
           pdf
-        },
-        directives: {
-            waves
         },
         data() {
             return {
@@ -169,13 +148,12 @@
                 list: null,
                 total: null,
                 listLoading: true,
-                typeOptions,
-                needUpdateOptions,
                 listQuery: {
                     page: 1,
                     limit: 10,
                     name: undefined,
-                    needUpdate: undefined
+                    needUpdate: undefined,
+                    setName:'breath'
                 },
                 dialogFormVisible: false,
                 jsonFormVisible:false,
@@ -205,7 +183,18 @@
                 uploadUrl:"",
                 url : process.env.BASE_API+"/appSetting/uploadApp",
                 previewPdfPath: "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf",
-                pdfNumPages:1
+                pdfNumPages:1,
+                typeOptions: [
+                  {
+                    value:'breath',
+                    label:'breath'
+                  },
+                  {
+                    value:'mri',
+                    label:'mri'
+                  }
+                ]
+
             }
         },
         filters: {
@@ -322,7 +311,7 @@
                     this.$refs['dataForm'].clearValidate()
                 })
               //table
-                getPdfLinedataByPdfId({id:row.id,positionY:180}).then(response => {
+                getPdfLinedataByPdfId({id:row.id,dataType:'table'}).then(response => {
                     this.lindataList = response
                 })
             },

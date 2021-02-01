@@ -3,7 +3,7 @@
 
     <div class="filter-container">
       <el-input @keyup.enter.native="handleFilter" style="width: 200px;" class="filter-item" placeholder="file name" v-model="listQuery.fileName"></el-input>
-      <el-select v-model="listQuery.setName" placeholder="Please select">
+      <el-select v-model="listQuery.setName" placeholder="Please select" @change="handleFilter">
         <el-option
           v-for="item in typeOptions"
           :key="item.value"
@@ -51,7 +51,7 @@
     </div>
 
     <el-dialog :title="jsonTitle" :visible.sync="dialogFormVisible">
-    <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
+    <el-button type="primary" @click="handleToJsonButton">toJson</el-button>
     <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
               style="width: 100%;font-size:13px;">
       <el-table-column width="100px" align="center" label="yBegin">
@@ -105,23 +105,6 @@
 
     </el-dialog>
 
-    <el-dialog :title="'版本号【'+temp.name+'】安装包上传'" :visible.sync="dialogUploadVisible">
-      <el-form :rules="rules" ref="dataForm" :model="temp" label-position="left" label-width="100px" style='width: 400px; margin-left:50px;'>
-
-        <el-upload :limit="1" accept = "apk"  :before-upload="beforeAvatarUpload" ref="upload"
-                   list-type="text" :action="this.uploadUrl" :show-file-list="true" :auto-upload="false"
-                   :on-progress="fileHandleProgress" :on-success="fileHandleSuccsess" :on-error="fileHandleError">
-          <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
-          <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
-          <div slot="tip" class="el-upload__tip">只能上传apk文件，且不超过100M</div>
-        </el-upload>
-
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogUploadVisible = false">取消</el-button>
-        <!--<el-button type="primary" @click="uploadApp">提交</el-button>-->
-      </div>
-    </el-dialog>
 
     <el-dialog title="Pdf-preview" :visible.sync="previewFormVisible">
       Page: <el-input @change="handlePdfPage" style="width: 200px;" class="filter-item" placeholder="page" v-model="pdfNumPages" type="number"></el-input>
@@ -166,7 +149,8 @@
                     page: 1,
                     limit: 10,
                     name: undefined,
-                    needUpdate: undefined
+                    needUpdate: undefined,
+                    setName:'breath'
                 },
                 dialogFormVisible: false,
                 jsonFormVisible:false,
@@ -312,7 +296,7 @@
                 this.dialogStatus = 'update'
                 this.dialogFormVisible = true
                 this.jsonTitle = row.fileName;
-                getPdfLinedataByPdfId({id:row.id,type:row.setName}).then(response => {
+                getPdfLinedataByPdfId({id:row.id,dataType:'key_value'}).then(response => {
                     this.lindataList = response
                 })
             },
@@ -330,14 +314,14 @@
                 this.pdfNumPages = parseInt(page);
               });
             },
-            HandleToJsonButton(){
+            handleToJsonButton(){
                 this.jsonFormVisible = true;
                 let json = '{\n';
                 const datalist = this.lindataList;
                 for(let i=0;i<datalist.length;i++){
                     if(datalist[i].isKey===1){
                         //上一个也是key
-                        if(i>0&&datalist[i-1].isKey===1&&datalist[i].isKey===1){
+                        if(i>0&&datalist[i-1].isKey===1){
                             json += ' : "",\n'
                         }
                         json += '  "' + datalist[i].text +'"';
