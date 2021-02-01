@@ -53,7 +53,7 @@
     </div>
 
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
-      <el-button type="primary" @click="HandleToJsonButton">toJson</el-button>
+      <div style="margin-bottom: 10px"><el-button type="primary" @click="HandleToJsonButton">toJson</el-button></div>
       <el-table :key='tableKey' :data="lindataList" v-loading="listLoading" element-loading-text="加载中..." border fit highlight-current-row
                 style="width: 100%;font-size:13px;" :row-class-name="tableRowClassName">
         <el-table-column width="100px" align="center" label="yBegin">
@@ -76,12 +76,12 @@
             <span>{{scope.row.text}}</span>
           </template>
         </el-table-column>
-        <el-table-column  align="center" label="isKey">
-          <template slot-scope="scope">
-            <el-checkbox @change="checkBoxChange(scope.row)" :checked="scope.row.isKey===1?true:false"></el-checkbox>
-            <!--<span>{{scope.row.isKey}}</span>-->
-          </template>
-        </el-table-column>
+<!--        <el-table-column  align="center" label="isKey">-->
+<!--          <template slot-scope="scope">-->
+<!--            <el-checkbox @change="checkBoxChange(scope.row)" :checked="scope.row.isKey===1?true:false"></el-checkbox>-->
+<!--            &lt;!&ndash;<span>{{scope.row.isKey}}</span>&ndash;&gt;-->
+<!--          </template>-->
+<!--        </el-table-column>-->
         <el-table-column  align="center" label="table_data_type">
           <template slot-scope="scope">
             <!--<el-checkbox v-model="scope.row.isKey" :checked="scope.row.isKey===1?true:false"  true-label="1" false-label="0" ></el-checkbox>-->
@@ -93,14 +93,14 @@
     </el-dialog>
 
     <el-dialog title="Json" :visible.sync="jsonFormVisible">
-<!--      <el-input-->
-<!--        type="textarea"-->
-<!--        autosize-->
-<!--        placeholder="Json"-->
-<!--        v-model="pdfJson">-->
-<!--      </el-input>-->
+      <el-input
+        type="textarea"
+        placeholder="Json"
+        v-model="pdfJson"
+        :rows="18">
+      </el-input>
       <json-viewer
-        :value="pdfJson"
+        :value="pdfJsonObj"
         copyable
         boxed></json-viewer>
 
@@ -146,6 +146,7 @@
         data() {
             return {
                 pdfJson:'',
+                pdfJsonObj:undefined,
                 lindataList:[],
                 tableKey: 0,
                 list: null,
@@ -324,7 +325,8 @@
             HandleToJsonButton(){
                 this.jsonFormVisible = true;
                 getTableJsonById({id:this.selectingId}).then( msg => {
-                  this.pdfJson = JSON.parse(msg.data);
+                  this.pdfJson = msg.data;
+                  this.pdfJsonObj = JSON.parse(msg.data);
                 })
             },
             handleDelete(row) {
