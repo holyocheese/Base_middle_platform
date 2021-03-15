@@ -30,6 +30,7 @@
     "normalize.css": "3.0.2",
     "npm": "^6.4.1",
     "nprogress": "0.2.0",
+    "prettier": "^2.2.1",
     "screenfull": "3.2.2",
     "showdown": "1.7.1",
     "simplemde": "1.11.2",
