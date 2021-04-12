@@ -141,6 +141,13 @@ export const asyncRouterMap = [
         name: "areaMarking",
         authority: "areaMarking",
       },
+      {
+        path: "pdfArea",
+        icon: "fa-user",
+        component: _import("pdf/pdfArea"),
+        name: "pdfArea",
+        authority: "pdfArea",
+      },
     ],
   },
 ];

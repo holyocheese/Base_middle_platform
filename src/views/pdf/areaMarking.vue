@@ -5,8 +5,9 @@
       <el-col :span="6">
         <div id="btnContainer" class="center-div">
           <el-button @click="start">Go</el-button>
-          <el-button @click="save" type="primary">Get position</el-button>
+<!--          <el-button @click="save" type="primary">Get position</el-button>-->
           <el-button @click="clearArea" type="danger">Remove</el-button>
+          <el-button @click="handleSave" type="success">Save area</el-button>
         </div>
       </el-col>
       <el-col :span="12" class="exp">
@@ -17,20 +18,22 @@
         <pdf v-bind:src="previewPdfPath" :page="pdfNumPages" style="display: inline-block; width: 75%;"></pdf>
       </el-col>
       <el-col :span="6">
-        <div class="center-div">
-          <el-form ref="form" :model="form" label-width="100px">
-            <el-form-item label="x-begin">
-              <el-input v-model="form.xBegin" readonly></el-input>
-            </el-form-item>
-            <el-form-item label="x-end">
-              <el-input v-model="form.xEnd" readonly></el-input>
-            </el-form-item>
-            <el-form-item label="y-begin">
-              <el-input v-model="form.yBegin" readonly></el-input>
-            </el-form-item>
-            <el-form-item label="y-end">
-              <el-input v-model="form.yEnd" readonly></el-input>
-            </el-form-item>
+        <div class="center-div" v-for="(item,index) in newForm">
+          <el-form ref="form" :model="form" label-width="100px" style="display: inline-block; width: 75%;margin-bottom: 10px">
+            <div :style="`border: 1px solid ${item.color};padding:15px`">index:{{index}}
+              <el-form-item label="x-begin">
+                <el-input v-model="item.xBegin" readonly></el-input>
+              </el-form-item>
+              <el-form-item label="x-end">
+                <el-input v-model="item.xEnd" readonly></el-input>
+              </el-form-item>
+              <el-form-item label="y-begin">
+                <el-input v-model="item.yBegin" readonly></el-input>
+              </el-form-item>
+              <el-form-item label="y-end">
+                <el-input v-model="item.yEnd" readonly></el-input>
+              </el-form-item>
+            </div>
           </el-form>
         </div>
       </el-col>
@@ -42,6 +45,12 @@
 
 <script>
 import pdf from "vue-pdf";
+import {
+  page,
+  addObj,
+  updateObj,
+  uploadFile,
+  delObj} from '@/api/pdf/pdfArea'
 
 export default {
   name: "areaMarking",
@@ -69,7 +78,10 @@ export default {
         xEnd: 0,
         yBegin: 0,
         yEnd: 0,
-      }
+      },
+      newForm:[],
+      rectArr:[],
+      nowColor:undefined
     }
   },
   created() {
@@ -83,6 +95,7 @@ export default {
         yBegin: 0,
         yEnd: 0,
       }
+      this.newForm = [];
     },
     pdfPreview() {
       let path = "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf";
@@ -96,7 +109,7 @@ export default {
     start: function () {
       this.canDraw = true;
     },
-    save: function () {
+    getArea: function () {
       const fx = this.x;
       const fy = this.y;
       const fh = this.yOffset;
@@ -105,6 +118,16 @@ export default {
         alert("请绘制检测区");
         return;
       }
+      const obj = {
+        xBegin:fx,
+        xEnd:fx + fw,
+        yBegin:fy,
+        yEnd:fy + fh,
+        color: this.nowColor,
+        pdfSetName:'breath',
+        areaType:'table'
+      }
+      this.newForm.push(obj);
       this.form.xBegin = fx;
       this.form.xEnd = fx + fw;
       this.form.yBegin = fy;
@@ -116,6 +139,7 @@ export default {
     },
     mousedown: function (e) {
       this.drawArea = true;
+      this.nowColor = this.randomHexColor();
       if (this.canDraw) {
         this.x = e.offsetX; // 鼠标落下时的X
         this.y = e.offsetY; // 鼠标落下时的Y
@@ -125,6 +149,7 @@ export default {
     },
     mouseup: function (e) {
       this.drawArea = false;
+      this.getArea();
     },
     mousemove: function (e) {
       this.drawRect(e);
@@ -136,6 +161,7 @@ export default {
         this.xOffset = e.offsetX - x;
         this.yOffset = e.offsetY - y;
         this.drawRectWithParam(x, y, this.xOffset, this.yOffset);
+        console.log(x, y, this.xOffset, this.yOffset);
       }
     },
     //根据4个参数绘制矩形
@@ -144,14 +170,25 @@ export default {
       const canvas = this.$refs.myCanvas;
       var ctx = canvas.getContext("2d");
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if(width>0||height>0){
+        ctx.clearRect(x-1, y-1, x-1+width, y-1+height);
+      }else{
+        ctx.clearRect(x+width-1, y+height-1, x, y);
+      }
+      //ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.beginPath();
 
       //设置线条颜色，必须放在绘制之前
-      ctx.strokeStyle = '#0623ef';
+      ctx.strokeStyle = this.nowColor;
       // 线宽设置，必须放在绘制之前
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 2;
       ctx.strokeRect(x, y, width, height);
+      this.rectArr.push({
+        xBegin: x,
+        xEnd: x+width,
+        yBegin: y,
+        yEnd: y+height,
+      })
     },
     //清除画的区域
     clearArea: function () {
@@ -163,6 +200,25 @@ export default {
       this.xOffset = 0;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       this.initForm();
+    },
+    handleSave: function () {
+      if (!this.form.xBegin) {
+        alert("请绘制检测区");
+        return;
+      }
+      for(let index in this.newForm){
+        addObj(this.newForm[index]).then(() => {
+          this.$notify({
+            title: "Success",
+            message: `Area ${index} Save success`,
+            type: "success",
+            duration: 2000,
+          });
+        });
+      }
+    },
+    randomHexColor: function () { //随机生成十六进制颜色
+      return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
     }
   }
 };
