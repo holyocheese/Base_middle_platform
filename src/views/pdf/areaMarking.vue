@@ -33,13 +33,34 @@
               <el-form-item label="y-end">
                 <el-input v-model="item.yEnd" readonly></el-input>
               </el-form-item>
+              <el-form-item label="data type">
+              <el-select
+                v-model="item.setName"
+                placeholder="Please select"
+              >
+                <el-option
+                  v-for="item in dataTypeOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
+              </el-select>
+              </el-form-item>
+              <el-form-item label="Json">
+                <el-button @click="handleJson(index)" type="success">Json</el-button>
+              </el-form-item>
             </div>
           </el-form>
         </div>
       </el-col>
     </el-row>
-  </div>
 
+    <el-dialog :title="jsonTitle" :visible.sync="jsonFormVisible">
+      <el-input type="textarea" autosize placeholder="Json" v-model="pdfJson">
+      </el-input>
+    </el-dialog>
+  </div>
 
 </template>
 
@@ -51,6 +72,8 @@ import {
   updateObj,
   uploadFile,
   delObj} from '@/api/pdf/pdfArea'
+import {
+  getTableJsonByIdAndArea} from '@/api/pdf/pdfLinedata'
 
 export default {
   name: "areaMarking",
@@ -72,20 +95,38 @@ export default {
       drawArea: false,
       canDraw: false,
       pdfNumPages: 0,
-      previewPdfPath: "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf",
+      previewPdfPath: "",
       form: {
         xBegin: 0,
         xEnd: 0,
         yBegin: 0,
         yEnd: 0,
       },
+      dataTypeOptions: [
+        {
+          value: "key-value",
+          label: "key_value",
+        },
+        {
+          value: "table",
+          label: "table",
+        },
+      ],
       newForm:[],
       rectArr:[],
-      nowColor:undefined
+      nowColor:undefined,
+      jsonTitle:undefined,
+      jsonFormVisible:false,
+      pdfJson:undefined,
     }
   },
   created() {
     this.pdfPreview();
+    if(this.$route.params.pdfName){
+      this.previewPdfPath = `./../static/pdf/${this.$route.params.pdfName}`
+    }else{
+      this.previewPdfPath = "../../static/pdf/0000_M004k004_呼吸機能検査_170707_システム_呼吸記録検査報告書_1.pdf"
+    }
   },
   methods: {
     initForm() {
@@ -125,7 +166,8 @@ export default {
         yEnd:fy + fh,
         color: this.nowColor,
         pdfSetName:'breath',
-        areaType:'table'
+        areaType:'table',
+        pdfId:this.$route.query.pdfId
       }
       this.newForm.push(obj);
       this.form.xBegin = fx;
@@ -216,6 +258,14 @@ export default {
           });
         });
       }
+    },
+    handleJson: function (index) {
+      this.jsonTitle = this.$route.params.pdfName;
+      this.jsonFormVisible = true;
+      getTableJsonByIdAndArea(this.newForm[index]).then((res) => {
+        console.log(res);
+        this.pdfJson = res.data;
+      });
     },
     randomHexColor: function () { //随机生成十六进制颜色
       return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);

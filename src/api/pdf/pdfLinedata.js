@@ -57,3 +57,11 @@ export function getTableJsonById(query) {
     params: query
   })
 }
+
+export function getTableJsonByIdAndArea(data) {
+  return fetch({
+    url: `/pdfLinedata/getTableJsonByArea?id=${data.pdfId}`,
+    method: 'post',
+    data
+  })
+}

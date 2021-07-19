@@ -88,6 +88,12 @@
             @click="handlePreview(scope.row)"
             >Prewiew</el-button
           >
+          <el-button
+            type="success"
+            size="small"
+            @click="handelAreaMarking(scope.row)"
+            >AreaMarking</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
@@ -385,6 +391,19 @@ export default {
         this.pdfNumPages = pdf.numPages;
       });
       this.previewFormVisible = true;
+    },
+    handelAreaMarking(row) {
+      this.$router.push({
+        path: "/pdf/areaMarking",
+        name: "areaMarking",
+        params: {
+          pdfId: row.id,
+          pdfName: row.fileName,
+        },
+        query: {
+          pdfId: row.id,
+        },
+      });
     },
     handlePdfPage(page) {
       this.previewPdfPath.promise.then((pdf) => {
